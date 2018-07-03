@@ -1,0 +1,13 @@
+package zhumeng.com.uimei.common.sys;
+
+/**
+ * @Title: CpuUsage.java
+ * @Package zhumeng.com.uimei.common.sys
+ * @Description: 采集CPU使用率
+ * @author z
+ * @date 2018年6月29日
+ * @version V1.0
+ */
+public class CpuUsage {
+
+}

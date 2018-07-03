@@ -1,0 +1,5 @@
+package com.zhumeng.spring_boot_mybatis_sharding_jdbc.model.copy;
+
+public enum UserSexEnum {
+    MAN, WOMAN
+}

@@ -1,0 +1,7 @@
+bootstrap.servers=139.159.243.191:9092
+acks=all
+retries=0
+batch.size=16384
+linger.ms=1
+buffer.memory=33554432
+key.serializer=org.apache.kafka.common.serialization.StringSerializer

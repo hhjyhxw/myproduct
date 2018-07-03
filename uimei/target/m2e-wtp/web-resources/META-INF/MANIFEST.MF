@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: uimei
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: z
+Implementation-Vendor-Id: zhumeng.com
+Build-Jdk: 1.8.0_91
+Implementation-URL: http://projects.spring.io/spring-boot/uimei/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
