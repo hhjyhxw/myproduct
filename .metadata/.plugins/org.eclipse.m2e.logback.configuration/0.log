@@ -14907,3 +14907,341 @@ org.eclipse.core.runtime.CoreException: Launch configuration DefaultKeyGenerator
 2018-07-04 15:12:43,671 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
 2018-07-04 15:12:43,726 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-07-04 15:12:43,726 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:13:06,773 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:13:06,793 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:13:07,038 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:13:07,304 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:13:07,369 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:13:07,369 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:14:15,326 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:15,342 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:14:15,588 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:14:15,858 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:14:15,914 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:15,915 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:14:42,900 [Worker-58] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for uimei
+2018-07-04 15:14:43,430 [Worker-58] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for uimei-logsserver
+2018-07-04 15:14:44,380 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:44,388 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:14:44,389 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:14:44,389 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:14:44,391 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:44,391 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logclient-kafka\src\test\resources
+2018-07-04 15:14:44,443 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:44,443 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-model\src\main\resources
+2018-07-04 15:14:44,444 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:44,444 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-model\src\test\resources
+2018-07-04 15:14:45,035 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:45,036 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:14:45,062 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:14:45,076 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:14:46,599 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:46,599 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:14:48,206 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:48,207 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 10 resources
+2018-07-04 15:14:48,291 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:14:48,364 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:14:50,895 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:14:50,895 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei\src\test\resources
+2018-07-04 15:15:39,116 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:15:39,141 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:15:39,420 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:15:39,666 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:15:39,723 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:15:39,723 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:16:21,737 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:16:21,753 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:16:22,022 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:16:22,284 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:16:22,367 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:16:22,367 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:16:28,080 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:16:28,096 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:16:28,377 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:16:28,627 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:16:28,682 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:16:28,683 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:17:09,660 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:17:09,677 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:17:09,935 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:17:10,180 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:17:10,241 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:17:10,241 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:18:02,500 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:18:02,532 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:18:02,774 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:18:03,036 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:18:03,091 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:18:03,091 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:20:56,138 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:20:56,155 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:20:56,413 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:20:56,678 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:20:56,736 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:20:56,736 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:21:16,498 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:21:16,516 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:21:16,775 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:21:17,159 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:21:17,228 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:21:17,229 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:21:22,226 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:21:22,254 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:21:22,535 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:21:22,779 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:21:22,834 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:21:22,835 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:21:27,212 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:21:27,243 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:21:27,519 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:21:27,760 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:21:27,815 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:21:27,815 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:23:56,142 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:23:56,143 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:23:56,144 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:23:56,148 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:23:56,151 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:23:56,152 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:24:56,463 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:24:56,481 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:24:56,720 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:24:56,976 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:24:57,031 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:24:57,031 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:25:17,015 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:25:17,034 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:25:17,294 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:25:17,547 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:25:17,603 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:25:17,603 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:25:49,954 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:25:49,972 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:25:50,226 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:25:50,513 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:25:50,570 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:25:50,570 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:25:53,129 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:25:53,170 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:25:53,443 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:25:53,689 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:25:53,747 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:25:53,747 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:26:45,009 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:26:45,025 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:26:45,267 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:26:45,552 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:26:45,606 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:26:45,606 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:27:13,206 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:27:13,222 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:27:13,484 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:27:13,725 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:27:13,780 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:27:13,780 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:27:41,137 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:27:41,153 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:27:41,413 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:27:41,653 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:27:41,710 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:27:41,710 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:27:56,528 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:27:56,544 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:27:56,795 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:27:57,037 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:27:57,091 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:27:57,091 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:28:01,555 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:28:01,571 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:28:01,809 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:28:02,079 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:28:02,133 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:28:02,133 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:28:24,336 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:28:24,357 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:28:24,647 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:28:24,894 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:28:24,949 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:28:24,949 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:29:04,447 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:29:04,463 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:29:04,763 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:29:05,054 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:29:05,117 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:29:05,117 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:29:59,412 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:29:59,434 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:29:59,690 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:29:59,930 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:29:59,987 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:29:59,987 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:31:58,507 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:31:58,508 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:31:58,508 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:31:58,510 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:31:58,511 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:31:58,511 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:32:07,835 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:32:07,835 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:32:07,835 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:32:07,836 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:32:07,837 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:32:07,837 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:32:19,536 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:32:19,537 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:32:19,538 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:32:19,543 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:32:19,548 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:32:19,549 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:32:29,787 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:32:29,787 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:32:29,788 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:32:29,790 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:32:29,792 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:32:29,792 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:32:47,204 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:32:47,205 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:32:47,205 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:32:47,206 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:32:47,208 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:32:47,208 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:33:00,353 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:33:00,371 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:33:00,637 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:33:00,875 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:33:00,930 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:33:00,930 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:34:08,415 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:34:08,438 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:34:08,691 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:34:08,934 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:34:08,990 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:34:08,990 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:34:25,315 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:34:25,335 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:34:25,589 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:34:25,826 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:34:25,887 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:34:25,887 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:34:33,872 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:34:33,894 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:34:34,179 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:34:34,449 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:34:34,502 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:34:34,502 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:34:56,423 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:34:56,440 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:34:56,684 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:34:56,945 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:34:56,999 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:34:56,999 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:36:55,479 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:36:55,495 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:36:55,741 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:36:55,989 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:36:56,049 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:36:56,049 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:37:04,390 [Worker-61] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver
+2018-07-04 15:37:04,390 [Worker-61] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -s D:\apache-maven-3.3.1\conf\settings.xml install
+2018-07-04 15:41:28,775 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:41:28,776 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:41:28,776 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:41:28,777 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:41:28,778 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:41:28,778 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:42:27,720 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:42:27,758 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:42:28,026 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:42:28,265 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:42:28,320 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:42:28,320 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:42:28,654 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:42:28,684 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:42:28,937 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:42:29,186 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:42:29,241 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:42:29,241 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:46:07,043 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:46:07,058 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:46:07,320 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:46:07,611 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:46:07,681 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:46:07,682 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:46:45,657 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:46:45,677 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:46:45,914 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:46:46,157 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:46:46,211 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:46:46,212 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:47:26,460 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:47:26,485 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:47:26,797 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:47:27,057 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:47:27,120 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:47:27,121 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:47:50,136 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:47:50,153 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:47:50,464 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:47:50,789 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:47:50,849 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:47:50,849 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:48:01,663 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:48:01,683 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:48:01,934 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:48:02,204 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:48:02,259 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:48:02,259 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:48:02,610 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:48:02,627 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:48:02,920 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:48:03,163 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:48:03,225 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:48:03,226 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:48:18,318 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:48:18,338 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:48:18,620 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:48:18,873 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:48:18,933 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:48:18,933 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:48:31,748 [Worker-61] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver
+2018-07-04 15:48:31,749 [Worker-61] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -s D:\apache-maven-3.3.1\conf\settings.xml install
+2018-07-04 15:49:05,598 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:49:05,624 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:49:05,902 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:49:06,161 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:49:06,222 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:49:06,223 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:50:41,976 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:50:41,976 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:50:41,977 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:50:41,979 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:50:41,981 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:50:41,982 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:50:47,828 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:50:47,829 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:50:47,829 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:50:47,831 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-07-04 15:50:47,834 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:50:47,834 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:52:33,607 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:52:33,628 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:52:33,877 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:52:34,121 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:52:34,186 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:52:34,186 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:52:34,493 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:52:34,518 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:52:34,806 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:52:35,064 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:52:35,121 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:52:35,121 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:55:23,488 [Worker-61] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver
+2018-07-04 15:55:23,489 [Worker-61] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -s D:\apache-maven-3.3.1\conf\settings.xml clean
+2018-07-04 15:55:27,567 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:55:27,597 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:55:28,079 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:55:28,497 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:55:30,251 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:55:30,251 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:56:13,763 [Worker-68] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver
+2018-07-04 15:56:13,763 [Worker-68] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -s D:\apache-maven-3.3.1\conf\settings.xml install
