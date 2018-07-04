@@ -91,6 +91,7 @@ public class KafkaConsumerServer implements  Runnable{
 	
 	private void spriteTopics(String topic){
 		topics = topic.split(",");
+		log.info("topics===+"+topics);
 		for (int i = 0; i < topics.length; i++) {
 			doComsume(topics[i]);
 		}

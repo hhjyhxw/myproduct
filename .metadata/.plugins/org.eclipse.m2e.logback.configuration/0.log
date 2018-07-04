@@ -15412,3 +15412,6 @@ org.eclipse.core.runtime.CoreException: Launch configuration DefaultKeyGenerator
 2018-07-04 16:52:14,968 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-07-04 16:52:14,989 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
 2018-07-04 16:52:15,280 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 16:52:15,672 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 16:52:15,742 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 16:52:15,742 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
