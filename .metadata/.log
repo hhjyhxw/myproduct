@@ -10122,3 +10122,486 @@ Binding(ALT+SHIFT+ARROW_LEFT,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:26.567
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:26.569
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:26.570
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:26.570
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:26.571
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:30.858
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:30.859
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:30.860
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:30.860
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:30.861
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:21:30.861
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:05.140
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:05.142
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:05.142
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:05.143
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:05.143
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:05.144
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.170
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.173
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.174
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.174
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.175
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.606
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.608
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.608
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.609
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:24.609
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:29.005
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:29.007
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:29.007
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:29.008
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:29.008
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:29.009
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:32.311
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:32.314
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:32.314
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:32.315
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:32.315
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:25:32.316
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 16:25:52.375
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:24.339
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:24.341
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:24.342
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:24.344
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:24.345
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:28.205
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:28.206
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:28.207
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:28.208
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:28.208
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:26:28.209
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 16:27:08.904
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:31:32.280
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:31:32.282
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:31:32.282
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:31:32.282
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:31:32.283
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:31:32.283
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.jdt.core 4 4 2018-07-04 16:34:44.951
+!MESSAGE JavaBuilder handling CoreException while cleaning: uimei
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:115)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.clean(JavaBuilder.java:293)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:736)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:496)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog.doClean(CleanDialog.java:318)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog$1.runInWorkspace(CleanDialog.java:151)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Could not delete '/uimei/target/classes/static'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1983)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:115)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.clean(JavaBuilder.java:293)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:736)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:496)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog.doClean(CleanDialog.java:318)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog$1.runInWorkspace(CleanDialog.java:151)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui\src\lay.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui\src.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css\modules\icheck.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css\modules.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2018-07-04 16:34:44.952
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete '/uimei/target/classes/static'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1983)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:115)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.clean(JavaBuilder.java:293)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:736)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:496)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog.doClean(CleanDialog.java:318)
+	at org.eclipse.ui.internal.ide.dialogs.CleanDialog$1.runInWorkspace(CleanDialog.java:151)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui\src\lay.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui\src.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css\modules\icheck.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css\modules.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins.
+Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static.
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2018-07-04 16:34:44.952
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui\src\lay.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui\src.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\layui.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css\modules\icheck.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css\modules.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui\css.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins\layui.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static\plugins.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2018-07-04 16:34:44.952
+!MESSAGE Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\classes\static.
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.864
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.867
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.868
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.868
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.868
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.869
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.870
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.871
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.875
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:45.876
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:53.049
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:53.051
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:53.059
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:53.060
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:53.060
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:53.060
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:57.122
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:57.125
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:57.126
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:57.127
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:57.127
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:34:57.127
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 16:36:10.556
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:38:00.155
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:38:00.162
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:38:00.167
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:38:00.169
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:38:00.170
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:38:00.172
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 16:43:56.341
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:38.277
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:38.279
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:38.279
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:38.280
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:38.280
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:42.236
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:42.237
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:42.237
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:42.238
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:42.239
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:51:42.239
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.089
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.091
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.091
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.092
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.092
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.093
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.093
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.093
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.094
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.094
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:14.094
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.610
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.612
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.613
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.614
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.615
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.615
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.616
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.617
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.618
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.618
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 16:52:17.619
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 16:52:38.123
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}

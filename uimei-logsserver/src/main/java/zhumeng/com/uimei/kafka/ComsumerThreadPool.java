@@ -34,7 +34,8 @@ public class ComsumerThreadPool {
 	 * 任务执行器
 	 */
 	private static TaskExecutor taskExecutor = new TaskExecutor() {
-		ExecutorService exeserv = Executors.newFixedThreadPool(ConfigUtil.get("comsumer.pool.thread")!=null?Integer.valueOf(ConfigUtil.get("comsumer.pool.thread")):1);
+//		ExecutorService exeserv = Executors.newFixedThreadPool(ConfigUtil.get("comsumer.pool.thread")!=null?Integer.valueOf(ConfigUtil.get("comsumer.pool.thread")):1);
+		ExecutorService exeserv = Executors.newCachedThreadPool();
 		public void execute(Runnable task) {
 			exeserv.execute(task);
 		}

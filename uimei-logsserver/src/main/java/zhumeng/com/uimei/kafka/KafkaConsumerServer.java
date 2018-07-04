@@ -104,6 +104,7 @@ public class KafkaConsumerServer implements  Runnable{
 		KafkaConsumer<String, Object> consumer = createKafkaConsumer();
 	    consumer.subscribe(Arrays.asList(topic));
 	    ConsumerRecords<String, Object> records = consumer.poll(10000);
+	    log.info("records==================="+records);
         for (ConsumerRecord<String, Object> record : records){
         	if(record!=null && record.value()!=null){
         		log.info(record.value().toString());
