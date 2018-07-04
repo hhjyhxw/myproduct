@@ -1,0 +1,24 @@
+package com.zhumeng.uimei.config;
+
+/**
+ * @Title: Snippet.java
+ * @Package com.zhumeng.uimei.config
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月3日
+ * @version V1.0
+*/
+public class Snippet {
+	/**
+	 * @Description: TODO
+	 * @param            
+	 * @return       void 
+	 * @throws
+	 * @author       z
+	 * @datetime     2018年7月3日下午4:00:16
+	*/
+	public static void main(String[] args) {
+		SpringUtil
+	}
+}
+

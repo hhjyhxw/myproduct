@@ -9,6 +9,8 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import zhumeng.com.uimei.kafka.model.VisitLogs;
+
 /**
  * @Title: KafkaConsumerServer.java
  * @Package zhumeng.com.uimei
@@ -62,7 +64,12 @@ public class KafkaConsumerServer implements  Runnable{
 	    ConsumerRecords<String, Object> records = consumer.poll(10000);
         for (ConsumerRecord<String, Object> record : records){
         	if(record!=null && record.value()!=null){
-        		log.info( record.value().toString());
+        		log.info(record.value().toString());
+//        		record.topic()
+        		if("visitLogs".equals(record.topic())){
+        			VisitLogs visitLogs = (VisitLogs) record.value();
+        			log.info("==================="+visitLogs.getVisitUrl());
+        		}
         	}
         }
         consumer.commitSync();

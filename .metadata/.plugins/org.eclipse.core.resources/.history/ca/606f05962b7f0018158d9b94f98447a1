@@ -1,0 +1,36 @@
+package com.zhumeng.uimei.config.quartz.job;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import com.zhumeng.uimei.kafka.ComsumerThreadPool;
+import com.zhumeng.uimei.kafka.ConfigUtil;
+import com.zhumeng.uimei.kafka.KafkaConsumerServer;
+
+/**
+ * @Title: StatiscSysInfo.java
+ * @Package zhumeng.com.uimei.config.quartz.job
+ * @Description: 定时上报系统信息
+ * @author z
+ * @date 2018年6月29日
+ * @version V1.0
+ */
+@Component
+@EnableScheduling
+public class KafkaComsumerquartz{
+	
+	public final static Logger log = LoggerFactory.getLogger(KafkaComsumerquartz.class);
+
+	
+
+	@Scheduled(cron = "0/5 * * * * ?")
+//	@Scheduled(cron = "0 0/10 * * * ?")
+	public void orderStatusJoRun() throws Exception{
+		new ComsumerThreadPool().getTaskExecutor().execute(new KafkaConsumerServer(ConfigUtil.get("topic")));
+	}
+
+
+}

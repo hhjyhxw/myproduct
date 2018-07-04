@@ -1,0 +1,66 @@
+package com.zhumeng.uimei.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.zhumeng.uimei.mapper.VisitErrorLogsMapper;
+import com.zhumeng.uimei.model.VisitErrorLogs;
+
+/**
+ * @Title: VisitErrorLogsService.java
+ * @Package com.zhumeng.uimei.service
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月3日
+ * @version V1.0
+ */
+@Service
+public class VisitErrorLogsService implements BaseService<VisitErrorLogs>{
+
+	 @Autowired
+	 private VisitErrorLogsMapper visitErrorLogsMapper;
+
+	
+	@Override
+	public int deleteByPrimaryKey(Long id) {
+		// TODO Auto-generated method stub
+		return visitErrorLogsMapper.deleteByPrimaryKey(id);
+	}
+
+	
+	@Override
+	public int insert(VisitErrorLogs record) {
+		// TODO Auto-generated method stub
+		return visitErrorLogsMapper.insert(record);
+	}
+
+	
+	@Override
+	public int insertSelective(VisitErrorLogs record) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+	@Override
+	public VisitErrorLogs selectByPrimaryKey(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	@Override
+	public int updateByPrimaryKeySelective(VisitErrorLogs record) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.zhumeng.uimei.service.BaseService#updateByPrimaryKey(java.lang.Object)
+	 */
+	@Override
+	public int updateByPrimaryKey(VisitErrorLogs record) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

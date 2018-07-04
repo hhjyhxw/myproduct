@@ -1,0 +1,13 @@
+package zhumeng.com.uimei.kafka.model;
+
+/**
+ * @Title: ss.java
+ * @Package zhumeng.com.uimei.kafka.model
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月3日
+ * @version V1.0
+ */
+public class ss {
+
+}

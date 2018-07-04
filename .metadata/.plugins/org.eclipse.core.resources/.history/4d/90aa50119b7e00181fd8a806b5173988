@@ -1,0 +1,17 @@
+package com.zhumeng.uimei.mapper;
+
+import com.zhumeng.uimei.model.VisitErrorLogs;
+
+public interface VisitErrorLogsMapper {
+    int deleteByPrimaryKey(Long id);
+
+    int insert(VisitErrorLogs record);
+
+    int insertSelective(VisitErrorLogs record);
+
+    VisitErrorLogs selectByPrimaryKey(Long id);
+
+    int updateByPrimaryKeySelective(VisitErrorLogs record);
+
+    int updateByPrimaryKey(VisitErrorLogs record);
+}

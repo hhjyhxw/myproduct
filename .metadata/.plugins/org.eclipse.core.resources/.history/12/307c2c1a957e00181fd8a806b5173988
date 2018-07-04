@@ -1,0 +1,71 @@
+package com.zhumeng.uimei.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.zhumeng.uimei.mapper.SysStateMapper;
+import com.zhumeng.uimei.model.SysState;
+import com.zhumeng.uimei.model.VisitErrorLogs;
+
+/**
+ * @Title: SysStateService.java
+ * @Package com.zhumeng.uimei.service
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月3日
+ * @version V1.0
+ */
+@Service
+public class SysStateService implements BaseService<SysState>{
+
+	 @Autowired
+	 private SysStateMapper sysStateMapper;
+
+	
+	@Override
+	public int deleteByPrimaryKey(Long id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+	@Override
+	public int insert(SysState record) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+	@Override
+	public int insertSelective(SysState record) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+	@Override
+	public VisitErrorLogs selectByPrimaryKey(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.zhumeng.uimei.service.BaseService#updateByPrimaryKeySelective(java.lang.Object)
+	 */
+	@Override
+	public int updateByPrimaryKeySelective(SysState record) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.zhumeng.uimei.service.BaseService#updateByPrimaryKey(java.lang.Object)
+	 */
+	@Override
+	public int updateByPrimaryKey(SysState record) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	 
+	
+}

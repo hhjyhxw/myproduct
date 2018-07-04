@@ -1,0 +1,26 @@
+package com.zhumeng.uimei.service;
+
+import com.zhumeng.uimei.model.VisitErrorLogs;
+
+/**
+ * @Title: Service.java
+ * @Package com.zhumeng.uimei.service
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月3日
+ * @version V1.0
+ */
+public interface Service {
+
+	 	int deleteByPrimaryKey(Long id);
+
+	    int insert(VisitErrorLogs record);
+
+	    int insertSelective(VisitErrorLogs record);
+
+	    VisitErrorLogs selectByPrimaryKey(Long id);
+
+	    int updateByPrimaryKeySelective(VisitErrorLogs record);
+
+	    int updateByPrimaryKey(VisitErrorLogs record);
+}

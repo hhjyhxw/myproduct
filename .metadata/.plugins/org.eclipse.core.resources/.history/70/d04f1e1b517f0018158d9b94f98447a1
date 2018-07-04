@@ -1,0 +1,13 @@
+package zhumeng.com.uimei.config.datasource;
+
+/**
+ * @Title: DataSourceConfig.java
+ * @Package zhumeng.com.uimei.config.datasource
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月4日
+ * @version V1.0
+ */
+public class DataSourceConfig {
+
+}

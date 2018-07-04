@@ -51,4 +51,6 @@
 <fullyQualifiedTypeName name="org.apache.kafka.clients.producer.Callback"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.zhumeng.uimei.kafka.ComsumerThreadPool"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.PropertySource"/>
 </qualifiedTypeNameHistroy>
