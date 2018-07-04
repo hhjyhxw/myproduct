@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="zhumeng.com.uimei.dao.logs.SysStateMapper" >
+<mapper namespace="zhumeng.com.uimei.dao.logs.mapping.SysStateMapper" >
   <resultMap id="BaseResultMap" type="zhumeng.com.uimei.kafka.model.SysState" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="host_ipaddress" property="hostIpaddress" jdbcType="VARCHAR" />

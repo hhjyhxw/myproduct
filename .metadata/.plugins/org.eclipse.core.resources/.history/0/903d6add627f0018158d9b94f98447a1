@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="zhumeng.com.uimei.dao.logs.VisitLogsMapper" >
-  <resultMap id="BaseResultMap" type="zhumeng.com.uimei.kafka.model.VisitLogs" >
+<mapper namespace="zhumeng.com.uimei.dao.logs.mapping.VisitErrorLogsMapper" >
+  <resultMap id="BaseResultMap" type="zhumeng.com.uimei.kafka.model.VisitErrorLogs" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="project_name" property="projectName" jdbcType="VARCHAR" />
     <result column="module_name" property="moduleName" jdbcType="VARCHAR" />
@@ -12,33 +12,34 @@
     <result column="vitit_user" property="vititUser" jdbcType="VARCHAR" />
     <result column="visit_ipaddress" property="visitIpaddress" jdbcType="VARCHAR" />
     <result column="visit_url" property="visitUrl" jdbcType="VARCHAR" />
+    <result column="error_message" property="errorMessage" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, project_name, module_name, class_name, methed_name, params, visit_datetime, vitit_user, 
-    visit_ipaddress, visit_url
+    visit_ipaddress, visit_url, error_message
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from t_visit_logs
+    from t_visit_error_logs
     where id = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from t_visit_logs
+    delete from t_visit_error_logs
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="zhumeng.com.uimei.kafka.model.VisitLogs" >
-    insert into t_visit_logs (id, project_name, module_name, 
+  <insert id="insert" parameterType="zhumeng.com.uimei.kafka.model.VisitErrorLogs" >
+    insert into t_visit_error_logs (id, project_name, module_name, 
       class_name, methed_name, params, 
       visit_datetime, vitit_user, visit_ipaddress, 
-      visit_url)
+      visit_url, error_message)
     values (#{id,jdbcType=BIGINT}, #{projectName,jdbcType=VARCHAR}, #{moduleName,jdbcType=VARCHAR}, 
       #{className,jdbcType=VARCHAR}, #{methedName,jdbcType=VARCHAR}, #{params,jdbcType=VARCHAR}, 
       #{visitDatetime,jdbcType=TIMESTAMP}, #{vititUser,jdbcType=VARCHAR}, #{visitIpaddress,jdbcType=VARCHAR}, 
-      #{visitUrl,jdbcType=VARCHAR})
+      #{visitUrl,jdbcType=VARCHAR}, #{errorMessage,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="zhumeng.com.uimei.kafka.model.VisitLogs" >
-    insert into t_visit_logs
+  <insert id="insertSelective" parameterType="zhumeng.com.uimei.kafka.model.VisitErrorLogs" >
+    insert into t_visit_error_logs
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -69,6 +70,9 @@
       </if>
       <if test="visitUrl != null" >
         visit_url,
+      </if>
+      <if test="errorMessage != null" >
+        error_message,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -102,10 +106,13 @@
       <if test="visitUrl != null" >
         #{visitUrl,jdbcType=VARCHAR},
       </if>
+      <if test="errorMessage != null" >
+        #{errorMessage,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="zhumeng.com.uimei.kafka.model.VisitLogs" >
-    update t_visit_logs
+  <update id="updateByPrimaryKeySelective" parameterType="zhumeng.com.uimei.kafka.model.VisitErrorLogs" >
+    update t_visit_error_logs
     <set >
       <if test="projectName != null" >
         project_name = #{projectName,jdbcType=VARCHAR},
@@ -134,11 +141,14 @@
       <if test="visitUrl != null" >
         visit_url = #{visitUrl,jdbcType=VARCHAR},
       </if>
+      <if test="errorMessage != null" >
+        error_message = #{errorMessage,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="zhumeng.com.uimei.kafka.model.VisitLogs" >
-    update t_visit_logs
+  <update id="updateByPrimaryKey" parameterType="zhumeng.com.uimei.kafka.model.VisitErrorLogs" >
+    update t_visit_error_logs
     set project_name = #{projectName,jdbcType=VARCHAR},
       module_name = #{moduleName,jdbcType=VARCHAR},
       class_name = #{className,jdbcType=VARCHAR},
@@ -147,7 +157,8 @@
       visit_datetime = #{visitDatetime,jdbcType=TIMESTAMP},
       vitit_user = #{vititUser,jdbcType=VARCHAR},
       visit_ipaddress = #{visitIpaddress,jdbcType=VARCHAR},
-      visit_url = #{visitUrl,jdbcType=VARCHAR}
+      visit_url = #{visitUrl,jdbcType=VARCHAR},
+      error_message = #{errorMessage,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>
