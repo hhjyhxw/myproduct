@@ -10,10 +10,6 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import zhumeng.com.uimei.kafka.ComsumerThreadPool;
-import zhumeng.com.uimei.kafka.ConfigUtil;
-import zhumeng.com.uimei.kafka.KafkaConsumerServer;
-
 
 @SpringBootApplication
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class}) //排除DataSourceConfiguratrion
@@ -27,7 +23,5 @@ public class AppLogsServer extends SpringBootServletInitializer
     }
 	public static void main(String[] args) {
 		SpringApplication.run(AppLogsServer.class, args);
-		new ComsumerThreadPool().getTaskExecutor().execute(
-				new KafkaConsumerServer(ConfigUtil.get("topic")!=null?ConfigUtil.get("topic"):"visitLogs"));
 	}
 }

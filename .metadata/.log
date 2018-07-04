@@ -10608,3 +10608,12 @@ Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei
 
 !ENTRY org.eclipse.ui 4 4 2018-07-04 17:21:05.664
 !MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 17:47:23.138
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 17:47:24.332
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 17:51:57.275
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}

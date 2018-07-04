@@ -30,4 +30,5 @@ public class AppLogsServer extends SpringBootServletInitializer
 		new ComsumerThreadPool().getTaskExecutor().execute(
 				new KafkaConsumerServer(ConfigUtil.get("topic")!=null?ConfigUtil.get("topic"):"visitLogs"));
 	}
+	}
 }
