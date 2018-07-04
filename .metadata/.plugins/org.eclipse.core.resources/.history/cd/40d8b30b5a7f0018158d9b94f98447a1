@@ -1,0 +1,18 @@
+package zhumeng.com.uimei.service;
+
+
+public interface SERVICE<T> {
+	
+    int deleteByPrimaryKey(Long id);
+
+    int insert(T record);
+
+    int insertSelective(T record);
+
+    T selectByPrimaryKey(Long id);
+
+    int updateByPrimaryKeySelective(T t);
+
+    int updateByPrimaryKey(T record);
+	
+} 

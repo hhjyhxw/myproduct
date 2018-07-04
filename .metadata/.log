@@ -8861,3 +8861,729 @@ Contains: Could not delete: F:\20180504eclipses\myproducteclipse\workspace\uimei
 
 !ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 14:55:34.164
 !MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:03.710
+!MESSAGE properties loading for project 'uimei-logserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:03.711
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:03.711
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:03.712
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:03.714
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:03.715
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:03.715
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:03.716
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:06.450
+!MESSAGE properties loading for project 'uimei-logserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:06.451
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:06.451
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:06.452
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:07.919
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:07.920
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:07.921
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:07.921
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:07.922
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:05:07.922
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:08:14.595
+!MESSAGE properties removing for project 'uimei-logserver'
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-07-04 15:08:15.615
+!MESSAGE Launch configuration Application references closed project uimei-logserver
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-07-04 15:08:15.617
+!MESSAGE Launch configuration Application references closed project uimei-logserver
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-07-04 15:08:15.620
+!MESSAGE Launch configuration Application references closed project uimei-logserver
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-07-04 15:08:15.621
+!MESSAGE Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-07-04 15:08:15.621
+!MESSAGE Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-07-04 15:08:15.624
+!MESSAGE Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.612
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target/m2e-wtp/web-resources' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.613
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.615
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng/uimei-logserver' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng/uimei-logserver' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.615
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng/uimei-logserver' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.618
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.618
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.619
+!MESSAGE Resource '/uimei-logserver/target' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.620
+!MESSAGE Resource '/uimei-logserver/target' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.622
+!MESSAGE Resource '/uimei-logserver/target' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.623
+!MESSAGE Resource '/uimei-logserver/target' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.623
+!MESSAGE Resource '/uimei-logserver/target' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.624
+!MESSAGE Resource '/uimei-logserver/target' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.624
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.625
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.626
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target/m2e-wtp' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.626
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.627
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.627
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.629
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng/uimei-logserver' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng/uimei-logserver' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.629
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven/com.zhumeng/uimei-logserver' does not exist.
+
+!ENTRY org.tigris.subversion.subclipse.core 4 368 2018-07-04 15:08:39.630
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Synchronizer.setSyncInfo(Synchronizer.java:244)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$SyncInfoSynchronizedAccessor.flushPendingCacheWrites(SynchronizerSyncInfoCache.java:250)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache$1.run(SynchronizerSyncInfoCache.java:195)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.tigris.subversion.subclipse.core.status.SynchronizerSyncInfoCache.flushPendingStatuses(SynchronizerSyncInfoCache.java:193)
+	at org.tigris.subversion.subclipse.core.status.StatusCacheManager.resourceChanged(StatusCacheManager.java:365)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastBuildEvent(Workspace.java:364)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:139)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2018-07-04 15:08:39.630
+!MESSAGE Resource '/uimei-logserver/target/m2e-wtp/web-resources/META-INF/maven' does not exist.
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:08:39.679
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:08:39.681
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:08:39.682
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:08:39.682
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:08:39.683
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:08:39.683
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.ui 4 4 2018-07-04 15:09:44.316
+!MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@40815e73}
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.554
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.557
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.558
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.558
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.559
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.560
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 4 0 2018-07-04 15:14:43.560
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\maven-archiver\pom.properties.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\maven-archiver\pom.properties.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:386)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\maven-archiver\pom.properties (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	... 13 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2018-07-04 15:14:43.561
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\maven-archiver\pom.properties.
+!STACK 0
+java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\maven-archiver\pom.properties (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.562
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 4 0 2018-07-04 15:14:43.562
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\application.properties.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\application.properties.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:386)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\application.properties (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	... 13 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2018-07-04 15:14:43.562
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\application.properties.
+!STACK 0
+java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\application.properties (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.563
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 4 0 2018-07-04 15:14:43.564
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\config.properties.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\config.properties.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:386)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\config.properties (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	... 13 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2018-07-04 15:14:43.564
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\config.properties.
+!STACK 0
+java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\config.properties (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.565
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 4 0 2018-07-04 15:14:43.565
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\jdbc.properties.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\jdbc.properties.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:386)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\jdbc.properties (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	... 13 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2018-07-04 15:14:43.566
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\jdbc.properties.
+!STACK 0
+java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\jdbc.properties (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.566
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 4 0 2018-07-04 15:14:43.567
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\kafka.properties.
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\kafka.properties.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:386)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\kafka.properties (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	... 13 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2018-07-04 15:14:43.567
+!MESSAGE File not found: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\kafka.properties.
+!STACK 0
+java.io.FileNotFoundException: F:\20180504eclipses\myproducteclipse\workspace\uimei\target\uimei-0.0.1-SNAPSHOT\WEB-INF\classes\kafka.properties (系统找不到指定的文件。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:290)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:279)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.util.ProjectProperties.loadProjectProperties(ProjectProperties.java:83)
+	at jp.gr.java_conf.ussiy.app.propedit.eclipse.plugin.startup.Startup$1.resourceChanged(Startup.java:69)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:378)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1498)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:45)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.568
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.569
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.570
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.571
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.571
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.969
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.971
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.972
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.973
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:43.973
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:47.822
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:47.824
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:47.824
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:47.825
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:47.825
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:47.826
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:52.446
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:52.449
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:52.450
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:52.450
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:52.451
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:14:52.451
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:15:39.878
+!MESSAGE properties loading for project 'uimei-logsserver'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:15:39.879
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:15:39.879
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:15:39.880
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:15:39.880
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-04 15:15:39.881
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-07-04 15:17:42.101
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for TODO {key=Lcom/sun/xml/internal/bind/v2/TODO;} [in TODO.class [in com.sun.xml.internal.bind.v2 [in C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:81)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:999)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:500)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:689)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:607)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:599)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2018-07-04 15:17:42.101
+!MESSAGE Unknown javadoc format for TODO {key=Lcom/sun/xml/internal/bind/v2/TODO;} [in TODO.class [in com.sun.xml.internal.bind.v2 [in C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar]]]

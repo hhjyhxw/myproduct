@@ -14661,3 +14661,249 @@ org.eclipse.core.runtime.CoreException: Launch configuration DefaultKeyGenerator
 2018-07-04 14:55:31,920 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
 2018-07-04 14:55:33,781 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-07-04 14:55:33,782 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:05:04,820 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:05:04,826 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-04 15:05:04,826 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logserver\src\main\resources
+2018-07-04 15:05:04,826 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logserver\src\main\resources
+2018-07-04 15:05:04,828 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:05:04,828 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logserver\src\test\resources
+2018-07-04 15:05:04,903 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:05:04,931 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:05:05,433 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:05:05,907 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:05:07,613 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:05:07,613 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:08:15,614 [Worker-48] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration Application references closed project uimei-logserver
+org.eclipse.core.runtime.CoreException: Launch configuration Application references closed project uimei-logserver
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1406) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1278) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:229) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.6.200.v20130402-1505.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:552) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:425) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:309) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:747) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:876) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:104) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:87) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2018-07-04 15:08:15,615 [Worker-48] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration Application references closed project uimei-logserver
+org.eclipse.core.runtime.CoreException: Launch configuration Application references closed project uimei-logserver
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1406) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1278) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:229) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.6.200.v20130402-1505.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:552) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:425) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:310) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:747) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:876) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:104) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:87) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2018-07-04 15:08:15,619 [Worker-48] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration Application references closed project uimei-logserver
+org.eclipse.core.runtime.CoreException: Launch configuration Application references closed project uimei-logserver
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1406) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1278) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:229) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.6.200.v20130402-1505.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:2162) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:384) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:250) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:220) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:173) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:311) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:747) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:876) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:104) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:87) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2018-07-04 15:08:15,620 [Worker-48] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+org.eclipse.core.runtime.CoreException: Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1406) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1278) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:229) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.6.200.v20130402-1505.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:552) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:425) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:309) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:747) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:876) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:104) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:87) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2018-07-04 15:08:15,621 [Worker-48] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+org.eclipse.core.runtime.CoreException: Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1406) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1278) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:229) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.6.200.v20130402-1505.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:552) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:425) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:310) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:747) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:876) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:104) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:87) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2018-07-04 15:08:15,624 [Worker-48] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+org.eclipse.core.runtime.CoreException: Launch configuration DefaultKeyGenerator references closed project uimei-logserver
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1406) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1278) ~[org.eclipse.jdt.launching_3.7.101.v20140825-1922.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:53) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:38) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:229) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.6.200.v20130402-1505.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:2162) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:384) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:250) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:220) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:173) [org.eclipse.debug.core_3.9.1.v20140805-1629.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:311) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:335) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:70) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:747) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:876) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:104) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob$1.call(ProjectRegistryRefreshJob.java:1) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:87) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2018-07-04 15:08:40,041 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:08:40,064 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:08:40,471 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:08:40,784 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:08:40,846 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:08:40,846 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:09:43,115 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:09:43,132 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:09:43,415 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:09:43,697 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:09:43,757 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:09:43,757 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:09:46,684 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:09:46,712 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:09:46,987 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:09:47,229 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:09:47,284 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:09:47,284 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:10:05,103 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:10:05,126 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:10:05,554 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:10:05,790 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:10:05,846 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:10:05,846 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:10:17,170 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:10:17,186 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:10:17,466 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:10:17,791 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:10:17,850 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:10:17,851 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:11:08,021 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:11:08,040 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:11:08,285 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:11:08,542 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:11:08,598 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:11:08,598 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:11:39,976 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:11:39,996 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:11:40,287 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:11:40,576 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:11:40,633 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:11:40,633 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:11:48,504 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:11:48,525 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:11:48,763 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:11:49,009 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:11:49,064 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:11:49,064 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:11:57,762 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:11:57,780 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:11:58,106 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:11:58,406 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:11:58,486 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:11:58,486 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:12:02,385 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:02,401 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:12:02,700 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:12:02,966 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:12:03,022 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:03,023 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:12:05,300 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:05,319 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:12:05,573 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:12:05,836 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:12:05,890 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:05,890 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:12:26,871 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:26,887 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:12:27,126 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:12:27,402 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:12:27,457 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:27,457 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:12:36,568 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:36,584 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:12:36,828 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:12:37,064 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:12:37,119 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:37,120 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources
+2018-07-04 15:12:43,137 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:43,153 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 13 resources
+2018-07-04 15:12:43,426 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-07-04 15:12:43,671 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 882 resources
+2018-07-04 15:12:43,726 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-04 15:12:43,726 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\20180504eclipses\myproducteclipse\workspace\uimei-logsserver\src\test\resources

@@ -1,0 +1,73 @@
+package zhumeng.com.uimei.service.logs;
+
+import org.springframework.stereotype.Service;
+
+import zhumeng.com.uimei.kafka.model.VisitErrorLogs;
+import zhumeng.com.uimei.service.SERVICE;
+
+/**
+ * @Title: VisitErrorLogsService.java
+ * @Package zhumeng.com.uimei.service.logs
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月4日
+ * @version V1.0
+ */
+@Service
+public class VisitErrorLogsService implements SERVICE<VisitErrorLogs>{
+
+	/* (non-Javadoc)
+	 * @see zhumeng.com.uimei.service.SERVICE#deleteByPrimaryKey(java.lang.Long)
+	 */
+	@Override
+	public int deleteByPrimaryKey(Long id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see zhumeng.com.uimei.service.SERVICE#insert(java.lang.Object)
+	 */
+	@Override
+	public int insert(VisitErrorLogs t) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see zhumeng.com.uimei.service.SERVICE#insertSelective(java.lang.Object)
+	 */
+	@Override
+	public int insertSelective(VisitErrorLogs t) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see zhumeng.com.uimei.service.SERVICE#selectByPrimaryKey(java.lang.Long)
+	 */
+	@Override
+	public VisitErrorLogs selectByPrimaryKey(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see zhumeng.com.uimei.service.SERVICE#updateByPrimaryKeySelective(java.lang.Object)
+	 */
+	@Override
+	public int updateByPrimaryKeySelective(VisitErrorLogs t) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/* (non-Javadoc)
+	 * @see zhumeng.com.uimei.service.SERVICE#updateByPrimaryKey(java.lang.Object)
+	 */
+	@Override
+	public int updateByPrimaryKey(VisitErrorLogs record) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,19 @@
+package zhumeng.com.uimei.service.logs;
+
+import org.springframework.stereotype.Service;
+
+import zhumeng.com.uimei.kafka.model.VisitErrorLogs;
+import zhumeng.com.uimei.service.SERVICE;
+
+/**
+ * @Title: VisitErrorLogsService.java
+ * @Package zhumeng.com.uimei.service.logs
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月4日
+ * @version V1.0
+ */
+@Service
+public class VisitErrorLogsService implements SERVICE<VisitErrorLogs>{
+
+}
