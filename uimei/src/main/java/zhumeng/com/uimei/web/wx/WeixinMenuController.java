@@ -62,7 +62,7 @@ public class WeixinMenuController extends AppBaseController{
 	public String beforeAddWxMenu(TWxMenu tWxMenu,Long wxAppId, Model model) throws Exception{
 		
 		TWxMenu tWxMenuParam = new TWxMenu();
-		tWxMenuParam.setMenuLevel(0);
+		tWxMenuParam.setMenuLevel(1);
 		//父 id为0
 		tWxMenuParam.setParentId(0L);
 		tWxMenuParam.setIsUse("1");
@@ -108,7 +108,7 @@ public class WeixinMenuController extends AppBaseController{
 		
 		//父 id为0的所有 使用中的 一级菜单
 		TWxMenu tWxMenuParam = new TWxMenu();
-		tWxMenuParam.setMenuLevel(0);
+		tWxMenuParam.setMenuLevel(1);
 		tWxMenuParam.setParentId(0L);
 		tWxMenuParam.setIsUse("1");
 		tWxMenuParam.setAppId(wxAppId);

@@ -69,7 +69,7 @@
 		<script type="text/javascript" src="${basePath}/js/jquery.min.js"></script>
 		<script>
 			layui.config({
-				base: '../plugins/layui/modules/'
+				base: '${basePath}/plugins/layui/modules/'
 			});
 
 			layui.use(['icheck', 'laypage','layer'], function() {

@@ -13238,3 +13238,39 @@ Binding(ALT+SHIFT+V,
 
 !ENTRY org.eclipse.ui 4 4 2018-07-17 09:27:15.292
 !MESSAGE Conflicting handlers for org.eclipse.wst.sse.ui.format: {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler@1783fe7e} vs {org.eclipse.wst.sse.ui.internal.handlers.FormatHandler}
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:26.865
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:26.866
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:26.867
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:26.867
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:26.868
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:26.868
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:41.077
+!MESSAGE properties loading for project 'uimei'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:41.078
+!MESSAGE loading file 'application.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:41.079
+!MESSAGE loading file 'config.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:41.079
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:41.080
+!MESSAGE loading file 'kafka.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2018-07-17 10:29:41.080
+!MESSAGE loading file 'pom.properties'

@@ -1,22 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 <title>自定义菜单管理</title>
 
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="cache-control" content="no-cache">
-<meta http-equiv="expires" content="0">
-<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-<meta http-equiv="description" content="This is my page">
 <script src="${basePath}/wx/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <link href="${basePath}/wx/css/sub_style.css" rel="stylesheet" type="text/css" />
 <link href="${basePath}/wx/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="${basePath}/wx/css/demo.css?i=013" type="text/css">
-<link rel="stylesheet" href="${basePath}/wx/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="${basePath}/wx/css/demo.css?i=013" type="text/css"/>
+<link rel="stylesheet" href="${basePath}/wx/css/zTreeStyle/zTreeStyle.css" type="text/css"/>
 <script src="${basePath}/wx/js/jquery-ui.js" type="text/javascript"></script>
 <script src="${basePath}/wx/js/emotion.js" type="text/javascript"></script>
 <script type="text/javascript" src="${basePath}/wx/js/jquery.ztree.core-3.5.js"></script>
 <script type="text/javascript">	 
+
 	 /*修改菜单类型*/
 	 function changeMenuType(){
 		var obj = document.getElementById("_genre");
@@ -224,16 +219,13 @@
 											<dl>
 												<dt class="left co1 ddwid">所属菜单：</dt>
 												<dd class="left mL20">
-													<select name="parentId" id="_parentId">
+													<select name="parentId" id="_parentId" disabled="disabled">
 														<option value="0" selected="selected">无</option>
-
 														<#list list as c>
-															<#if (c?? && c.id!=m.id)>
-																<option value="${c.id }"
-																	<#if (m?? && m.parentId==c.id)>selected="selected"</#if>>${c.name}</option>
-															</#if>
+															 <#if (c?? && (!m?? || c.id!=m.id) )>
+																<option value='${c.id}' <#if (m?? && m.parentId==c.id)>selected='selected'</#if>>${c.name}</option>
+															</#if> 
 														</#list>
-
 													</select><span class="co4">*必填</span> <span class="co2">菜单级别为一级时，不存在所属菜单。</span>
 												</dd>
 											</dl>
