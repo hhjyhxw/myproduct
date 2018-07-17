@@ -1,5 +1,7 @@
 package zhumeng.com.uimei.dao.wx;
 
+import java.util.List;
+
 import zhumeng.com.uimei.model.dbo.wx.TWxUser;
 
 public interface TWxUserMapper {
@@ -14,4 +16,6 @@ public interface TWxUserMapper {
     int updateByPrimaryKeySelective(TWxUser record);
 
     int updateByPrimaryKey(TWxUser record);
+    
+    List<TWxUser> findForList(TWxUser record);
 }

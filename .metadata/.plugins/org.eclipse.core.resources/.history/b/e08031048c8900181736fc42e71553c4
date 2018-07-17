@@ -1,0 +1,226 @@
+package com.gxnnbsd.charger.wx.service;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+import zhumeng.com.uimei.model.dbo.wx.TWxImageText;
+import zhumeng.com.uimei.model.dbo.wx.TWxReply;
+import zhumeng.com.uimei.model.dbo.wx.TWxUser;
+import zhumeng.com.uimei.service.wx.TWxImageTextService;
+import zhumeng.com.uimei.service.wx.TWxMenuService;
+import zhumeng.com.uimei.service.wx.TWxReplyService;
+import zhumeng.com.uimei.service.wx.TWxUserService;
+import zhumeng.com.uimei.web.wxserver.entity.wexinmsg.Article;
+import zhumeng.com.uimei.web.wxserver.entity.wexinmsg.PicTexMsg;
+import zhumeng.com.uimei.web.wxserver.entity.wexinmsg.TextMsg;
+import zhumeng.com.uimei.web.wxserver.util.MessageUtil;
+
+
+@Component
+public class MessageHandler {
+
+	private Logger logger = LoggerFactory.getLogger(getClass());
+	//微信菜单
+	@Resource
+	private TWxMenuService wxMenuService;
+	//微信响应表
+	@Resource
+	private TWxReplyService wxReplyService;
+	//微信素材表
+	@Resource
+	private TWxImageTextService wxImageTextService;
+	//微信用户表
+	@Resource
+	private TWxUserService wxUserService;
+	
+	
+
+	/**
+	 * 关注事件处理
+	 * @param fromUserName  发送者的openid
+	 * @param toUserName 公众号的微信号
+	 * @param msgType	消息类型
+	 * @param wxAppId	系统公众号表的id
+	 * @return
+	 */
+	public String dealSubscribe(String fromUserName,String toUserName,Long wxAppId){
+		//查询用户
+		TWxUser wxUser = new TWxUser();
+		wxUser.setOpenid(fromUserName);
+		List<TWxUser> wxUserList = wxUserService.findList(wxUser);
+		if (wxUserList.size() <= 0) {
+			wxUser.setSubscribeFlag("1");
+			wxUser.setSubscribeDate(new Date());
+			wxUser.setOpenid(fromUserName);
+			wxUserService.save(wxUser);  //不用保存，因为小程序与公众号关联，只能通过unionid 保存
+		} else {
+			wxUser = wxUserList.get(0);
+			wxUser.setSubscribeFlag("1");
+			wxUser.setSubscribeDate(new Date());
+			wxUser.setOpenid(fromUserName);
+			wxUserService.save(wxUser);
+		}
+		// 查询响应表 并 返回 xml 格式 字符串
+		return getReturnXmlMessage("3",null,wxAppId,fromUserName,toUserName);
+	}
+	
+	/**
+	 * 取消关注事件处理
+	 * @param fromUserName  发送者的openid
+	 * @param toUserName 公众号的微信号
+	 * @return
+	 */
+	public String dealUnSubscribe(String fromUserName,String toUserName){
+		//查询用户
+		TWxUser wxUser = new TWxUser();
+		wxUser.setOpenid(fromUserName);
+		List<TWxUser> wxUserList = wxUserService.findList(wxUser);
+		if (wxUserList.size() <= 0) {
+			wxUser.setSubscribeFlag("0");
+			wxUser.setSubscribeDate(new Date());
+			wxUser.setUnsubscribeDate(new Date());
+			wxUser.setOpenid(fromUserName);
+			wxUserService.save(wxUser);
+		} else {
+			wxUser = wxUserList.get(0);
+			wxUser.setSubscribeFlag("0");
+			wxUser.setSubscribeDate(new Date());
+			wxUser.setUnsubscribeDate(new Date());
+			wxUser.setOpenid(fromUserName);
+			wxUserService.save(wxUser);
+		}
+		return null;
+		
+	}
+	
+	/**
+	 * 文本消息处理
+	 * @return
+	 */
+	public String dealText(String content,String fromUserName,String toUserName,Long wxAppId){
+		// 查询响应表 并 返回 xml 格式 字符串
+		return getReturnXmlMessage("2",content,wxAppId,fromUserName,toUserName);
+	}
+	
+	/**
+	 * 菜单点击事件处理
+	 * @return
+	 */
+	public String dealMenuClick(String eventKey,String fromUserName,String toUserName,Long wxAppId){
+		// 查询响应表 并 返回 xml 格式 字符串
+		return getReturnXmlMessage("1",eventKey,wxAppId,fromUserName,toUserName);
+	}
+	
+	/**
+	 * 默认回复
+	 * @return
+	 */
+	public String dealDefault(String fromUserName, String toUserName, Long wxAppId) {
+		// 查询响应表 并 返回 xml 格式 字符串
+		return getReturnXmlMessage("4",null,wxAppId,fromUserName,toUserName);
+	}
+	
+	/**
+	 * 
+	 * @param MsgEvent 1点击菜单，2输入文本,3订阅关注，4 无法识别的默认回复
+	 * @param msgKey 关键字
+	 * @param wxAppId 系统公众号表 id
+	 * @param fromUserName
+	 * @param toUserName
+	 * @return
+	 */
+	private String getReturnXmlMessage(String MsgEvent,String msgKey,Long wxAppId,String fromUserName,String toUserName){
+		TWxReply tWxReply = new TWxReply();
+		tWxReply.setMsgEvent(MsgEvent);
+		tWxReply.setAppId(wxAppId);
+		if(null!=msgKey && !"".equals(msgKey)){
+			tWxReply.setMsgKey(msgKey);
+		}
+		List<TWxReply> tWxReplyList = wxReplyService.findList(tWxReply);
+		logger.warn("tWxReplyList.size()==="+(tWxReplyList!=null?tWxReplyList.size():0));
+		if (tWxReplyList.size() > 0) {
+			return getReturnXmlMessage(tWxReplyList.get(0),fromUserName,toUserName,wxAppId);
+		} else {
+			//默认回复也找 不到 则 返回空
+			if("4".equals(MsgEvent)){
+				return null;
+			}
+			logger.warn("进入默认回复,wxAppId==="+wxAppId);
+			//使用默认回复
+			return getReturnXmlMessage("4",null,wxAppId,fromUserName,toUserName);
+		}
+	}
+	
+	/**
+	 * 1、根据响应表 判断是文本 还是图文，
+	 * 2、如果是图文回复，则查询图文表
+	 * 3、生成xml
+	 * 
+	 * 包响应内容封装成 xml字符串 并返回
+	 * @param tWxReply 响应对象
+	 * @param fromUserName 
+	 * @param toUserName
+	 * @return
+	 */
+	private String getReturnXmlMessage(TWxReply tWxReply,String fromUserName,String toUserName,Long wxAppId){
+		logger.warn("tWxReply.getMsgType()==="+tWxReply.getMsgType());
+		logger.warn("wxAppId==="+wxAppId);
+		//1 文本 2图文
+		if("1".equals(tWxReply.getMsgType())){
+			TextMsg textMsg = new TextMsg();
+			textMsg.setContent(tWxReply.getReplyMsg());
+			textMsg.setToUserName(fromUserName);
+			textMsg.setFromUserName(toUserName);
+			textMsg.setMsgType("text");
+			textMsg.setCreateTime(System.currentTimeMillis());
+			return MessageUtil.textMessageToXml(textMsg);
+		}else if("2".equals(tWxReply.getMsgType())){
+			if(null!=tWxReply.getReplyMsg() && !"".equals(tWxReply.getReplyMsg())){
+				PicTexMsg picTexMsg = new PicTexMsg();
+				picTexMsg.setMsgType("news");
+				picTexMsg.setToUserName(fromUserName);
+				picTexMsg.setFromUserName(toUserName);
+				//查找图文
+//				TWxImageText tWxImageTextParam = new TWxImageText();
+//				tWxImageTextParam.setAppId(wxAppId);
+//				tWxImageTextParam.setId(Integer.valueOf(tWxReply.getReplyMsg()));
+//				List<TWxImageText> tWxImageTextList = wxImageTextService.findList(tWxImageTextParam);
+				TWxImageText parent = wxImageTextService.findByKey(Long.parseLong(tWxReply.getReplyMsg()));
+				if(parent!=null){
+					Article article = new Article();
+					article.setPicUrl(parent.getWxPicUrl());
+					article.setDescription(parent.getDescription());
+					article.setTitle(parent.getTitle());
+					article.setUrl(parent.getVistUrl());
+					picTexMsg.getArticles().add(article);
+					picTexMsg.setArticleCount(1);
+					//查找子图文
+					TWxImageText paramTWxImageText = new TWxImageText();
+					paramTWxImageText.setAppId(wxAppId);
+					paramTWxImageText.setParent(parent);
+					List<TWxImageText> tWxImageTextList = wxImageTextService.findList(paramTWxImageText);
+					if(tWxImageTextList!=null && tWxImageTextList.size()>0){
+						picTexMsg.setArticleCount(picTexMsg.getArticleCount()+tWxImageTextList.size());
+						for (TWxImageText child:tWxImageTextList) {
+							article = new Article();
+							article.setPicUrl(child.getWxPicUrl());
+							article.setDescription(child.getDescription());
+							article.setTitle(child.getTitle());
+							article.setUrl(child.getVistUrl());
+							picTexMsg.getArticles().add(article);
+						}
+					}
+					return MessageUtil.picTexttMessageToXml(picTexMsg);
+				}
+			}
+		}
+		return null;
+	}
+	
+}
