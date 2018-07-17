@@ -1,0 +1,150 @@
+package com.gxnnbsd.modules.business.wx.util;
+
+import java.util.List;
+
+import org.activiti.engine.impl.util.json.JSONObject;
+
+import com.gxnnbsd.charger.wx.entity.menu.ClickMenu;
+import com.gxnnbsd.charger.wx.entity.menu.Menu;
+import com.gxnnbsd.charger.wx.entity.menu.ScancodeMenu;
+import com.gxnnbsd.charger.wx.entity.menu.ScancodeWaitmsg;
+import com.gxnnbsd.charger.wx.entity.menu.Sub_Menu;
+import com.gxnnbsd.charger.wx.entity.menu.UrlMenu;
+import com.gxnnbsd.charger.wx.entity.menu.XcxMenu;
+import com.gxnnbsd.modules.business.wx.entity.TWxMenu;
+
+public class MenuUtil {
+
+	/**
+	 * 生成微信菜单 通过菜单列表生成微信菜单
+	 * 
+	 * @param menus
+	 * @return
+	 */
+	public static Menu getMenu(List<TWxMenu> menus) {
+		int len = menus.size();
+		Menu menu = new Menu();
+		for (TWxMenu m : menus) {
+
+			if (m.getMenuLevel().intValue() == 1) { // 一级菜单
+				Sub_Menu sub = new Sub_Menu();// 二级菜单
+				sub.setName(m.getName());
+				for (int i = 0; i < len; i++) {// 判断该一级菜单是否有二级菜单
+					TWxMenu mm = menus.get(i);
+					if (mm.getParent().getId().intValue()==m.getId().intValue()) {// 二级菜单的父类ID与一级菜单一样
+						if (mm.getMenuType().equals("1")) {// 判断菜单的响应是视图
+							UrlMenu urlmenu = new UrlMenu();
+							urlmenu.setName(mm.getName());
+							urlmenu.setUrl(mm.getUrl());
+							sub.getSub_button().add(urlmenu);
+						} else if (mm.getMenuType().equals("2")) {// 事件
+							ClickMenu clickMenu = new ClickMenu();
+							clickMenu.setKey(mm.getId().toString());
+							clickMenu.setName(mm.getName());
+							sub.getSub_button().add(clickMenu); 
+						}else if (mm.getMenuType().equals("3")){//scancode_push 扫码（跳转url）
+							ScancodeMenu scancodeMenu = new ScancodeMenu(); 
+							scancodeMenu.setName(mm.getName());
+							scancodeMenu.setKey(mm.getId().toString());
+							sub.getSub_button().add(scancodeMenu); 
+						}else if (mm.getMenuType().equals("4")){//miniprogram 跳转小程序
+							XcxMenu xcxMenu = new XcxMenu();
+							xcxMenu.setName(mm.getName());
+							xcxMenu.setAppid(mm.getXcxAppid());
+							xcxMenu.setPagepath(mm.getPagepath());
+							sub.getSub_button().add(xcxMenu); 
+						}else if (mm.getMenuType().equals("5")){//scancode_waitmsg 扫码接收推送消息
+							ScancodeWaitmsg scancodeWaitmsg = new ScancodeWaitmsg();
+							scancodeWaitmsg.setName(mm.getName());
+							scancodeWaitmsg.setKey(mm.getId().toString());
+							sub.getSub_button().add(scancodeWaitmsg); 
+						}
+						
+					}
+					// 就一个等级 最后一个 生成一个一级菜单 就一个一级菜单 当i为最后一个 但二级菜单的长度仍未1
+					if (i == len - 1 && sub.getSub_button().size() == 0) {
+						if (m.getMenuType().equals("2")) {
+							ClickMenu clickMenu = new ClickMenu();
+							clickMenu.setKey(m.getId().toString());
+							clickMenu.setName(m.getName());
+							menu.getButton().add(clickMenu);
+						}
+						if (m.getMenuType().equals("1")) {
+							UrlMenu urlmenu = new UrlMenu();
+							urlmenu.setName(m.getName());
+							urlmenu.setUrl(m.getUrl());
+							menu.getButton().add(urlmenu);
+						}
+						if (mm.getMenuType().equals("3")){//scancode_push 扫码（显示结果）
+							ScancodeMenu scancodeMenu = new ScancodeMenu(); 
+							scancodeMenu.setName(mm.getName());
+							scancodeMenu.setKey(mm.getId().toString());
+							menu.getButton().add(scancodeMenu);
+						}
+						if (mm.getMenuType().equals("4")){//miniprogram 跳转小程序
+								XcxMenu xcxMenu = new XcxMenu();
+								xcxMenu.setName(mm.getName());
+								xcxMenu.setAppid(mm.getXcxAppid());
+								xcxMenu.setPagepath(mm.getPagepath());
+								menu.getButton().add(xcxMenu);
+						}
+						if (mm.getMenuType().equals("5")){//scancode_waitmsg 扫码接收推送消息
+							ScancodeWaitmsg scancodeWaitmsg = new ScancodeWaitmsg();
+							scancodeWaitmsg.setName(mm.getName());
+							scancodeWaitmsg.setKey(mm.getId().toString());
+							sub.getSub_button().add(scancodeWaitmsg); 
+						}
+					}
+					if(sub.getSub_button().size()>=5){//二级菜单长度超过5个 停止
+						break;
+					}
+
+				}// 二级菜单遍历完
+				if (sub.getSub_button().size() > 0
+						&& sub.getSub_button().size() <= 5) {// 微信的二级菜单只能是五个
+					menu.getButton().add(sub);
+				}
+			}
+			if (m.getMenuLevel().intValue() == 2 && m.getParent().getId().intValue()==0) {// 单独二级菜单
+				if (m.getMenuType().equals("2")) {
+					ClickMenu clickMenu = new ClickMenu();
+					clickMenu.setKey(m.getId().toString());
+					clickMenu.setName(m.getName());
+					menu.getButton().add(clickMenu);
+				}
+				if (m.getMenuLevel().equals("1")) {
+					UrlMenu urlmenu = new UrlMenu();
+					urlmenu.setName(m.getName());
+					urlmenu.setUrl(m.getUrl());
+					menu.getButton().add(urlmenu);
+				}
+				if (m.getMenuType().equals("3")){//scancode_push 扫码（显示结果）
+					ScancodeMenu scancodeMenu = new ScancodeMenu(); 
+					scancodeMenu.setName(m.getName());
+					scancodeMenu.setKey(m.getId().toString());
+					menu.getButton().add(scancodeMenu);
+				}
+				if (m.getMenuType().equals("4")){//miniprogram 跳转小程序
+						XcxMenu xcxMenu = new XcxMenu();
+						xcxMenu.setName(m.getName());
+						xcxMenu.setAppid(m.getXcxAppid());
+						xcxMenu.setPagepath(m.getPagepath());
+						menu.getButton().add(xcxMenu);
+				}
+				if (m.getMenuType().equals("5")){//scancode_waitmsg 扫码接收推送消息
+					ScancodeWaitmsg scancodeWaitmsg = new ScancodeWaitmsg();
+					scancodeWaitmsg.setName(m.getName());
+					scancodeWaitmsg.setKey(m.getId().toString());
+					menu.getButton().add(scancodeWaitmsg); 
+				}
+			}
+			if (menu.getButton().size() >= 3) {
+				break;
+			}
+		}
+		System.out.println(new JSONObject(menu).toString());
+		return menu;
+
+	}
+
+}

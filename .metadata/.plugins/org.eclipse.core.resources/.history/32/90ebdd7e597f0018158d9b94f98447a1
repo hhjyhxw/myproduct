@@ -1,9 +1,0 @@
-package zhumeng.com.uimei.service;
-
-import java.util.List;
-import com.github.pagehelper.PageInfo;
-
-public interface SERVICE<T> {
-	
-	
-} 

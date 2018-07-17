@@ -15,6 +15,7 @@
     <result column="xcx_appid" property="xcxAppid" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="modify_Time" property="modifyTime" jdbcType="TIMESTAMP" />
+    <collection property="parent" column="parent_id" select="zhumeng.com.uimei.dao.wx.TWxMenuMapper.selectByPrimaryKey" />
   </resultMap>
   <sql id="Base_Column_List" >
     ID, app_id, name, url, menu_level, order_no, menu_type, parent_id, is_use, pagepath, 
@@ -30,7 +31,7 @@
     delete from t_wx_menu
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="zhumeng.com.uimei.model.dbo.wx.TWxMenu" >
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id"  parameterType="zhumeng.com.uimei.model.dbo.wx.TWxMenu" >
     insert into t_wx_menu (ID, app_id, name, 
       url, menu_level, order_no, 
       menu_type, parent_id, is_use, 
@@ -185,4 +186,33 @@
       modify_Time = #{modifyTime,jdbcType=TIMESTAMP}
     where ID = #{id,jdbcType=BIGINT}
   </update>
+  
+     <select id="findForList" parameterType="zhumeng.com.uimei.model.dbo.wx.TWxMenu" resultMap="BaseResultMap">
+		 select
+		 <include refid="Base_Column_List" />
+   		 from t_wx_menu t
+		<where>
+     		 <if test="id != null" >
+      		  	and t.id =  #{id,jdbcType=BIGINT}
+     		 </if>
+     		  <if test="parentId != null" >
+      		  	and t.parent_id =  #{parentId,jdbcType=BIGINT}
+     		 </if>
+     		 <if test="appId != null" >
+      		  		and t.app_id =  #{appId,jdbcType=BIGINT}
+     		 </if>
+     		  <if test="menuLevel != null" >
+      		  		and t.menu_level =  #{menuLevel,jdbcType=BIGINT}
+     		 </if>
+     		 <if test="menuType != null and menuType!='' " >
+      		  		and t.menu_type =  #{menuType,jdbcType=BIGINT}
+     		 </if>
+     		 <if test="isUse!= null and isUse !='' " >
+      		  		and t.is_use =  #{isUse,jdbcType=BIGINT}
+     		 </if>
+     		 <if test="name!=null and ''!=name ">
+       		  and t.name like CONCAT('%',CONCAT(#{name},'%'))
+       		</if>
+		</where>
+	</select>
 </mapper>

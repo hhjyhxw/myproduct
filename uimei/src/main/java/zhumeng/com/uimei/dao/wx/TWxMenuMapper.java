@@ -1,5 +1,7 @@
 package zhumeng.com.uimei.dao.wx;
 
+import java.util.List;
+
 import zhumeng.com.uimei.model.dbo.wx.TWxMenu;
 
 public interface TWxMenuMapper {
@@ -14,4 +16,7 @@ public interface TWxMenuMapper {
     int updateByPrimaryKeySelective(TWxMenu record);
 
     int updateByPrimaryKey(TWxMenu record);
+    
+    
+    List<TWxMenu> findForList(TWxMenu record);
 }

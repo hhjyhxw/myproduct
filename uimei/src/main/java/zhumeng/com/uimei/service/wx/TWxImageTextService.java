@@ -10,7 +10,7 @@ public interface TWxImageTextService extends BaseService<TWxImageText>{
 	
 	void saveWeixinMaterial(String[] titles, String[] newsImages,
 			String[] descriptions, String[] urls, Long[] id,
-			HttpServletRequest request);
+			HttpServletRequest request,Long wxAppId);
 
 	void updateDefaults(Long id);
 

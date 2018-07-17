@@ -1,0 +1,24 @@
+package zhumeng.com.uimei.web.wxserver.util;
+
+/**
+ * @Title: Snippet.java
+ * @Package zhumeng.com.uimei.web.wxserver.util
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月16日
+ * @version V1.0
+*/
+public class Snippet {
+	/**
+	 * @Description: TODO
+	 * @param            
+	 * @return       void 
+	 * @throws
+	 * @author       z
+	 * @datetime     2018年7月16日上午11:31:15
+	*/
+	public static void main(String[] args) {
+		F:\20180504eclipses\myproducteclipse\workspace\uimei\src\main\java\zhumeng\com\uimei\web\wxserver
+	}
+}
+

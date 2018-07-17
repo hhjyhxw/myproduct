@@ -13,6 +13,7 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import zhumeng.com.uimei.common.ResponseUtils;
 import zhumeng.com.uimei.common.util.RequestUtil;
@@ -156,4 +157,15 @@ public abstract class AppBaseController extends RequestUtil {
 		 return line;
 	}
 	
+	/**
+	 * 添加Flash消息
+	 * @param message
+	 */
+	protected void addMessage(RedirectAttributes redirectAttributes, String... messages) {
+		StringBuilder sb = new StringBuilder();
+		for (String message : messages){
+			sb.append(message).append(messages.length>1?"<br/>":"");
+		}
+		redirectAttributes.addFlashAttribute("message", sb.toString());
+	}
 }

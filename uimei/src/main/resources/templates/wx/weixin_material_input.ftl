@@ -465,6 +465,7 @@
 								<div class="msg-editer">
 								<form method="post" action="${basePath}${backPath}/wxImageText/saveWeixinMaterial" enctype="multipart/form-data" onsubmit="return onSubmitAction();">
 								<input type="hidden" name="id" value="${(wm.id)!}"/>
+								<input type="hidden" name="wxAppId" value="${(wxAppId)!}"/>
 							
 								<div id="val_id">
 								<#list list as wm2>

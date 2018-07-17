@@ -1,5 +1,7 @@
 package zhumeng.com.uimei.dao.wx;
 
+import java.util.List;
+
 import zhumeng.com.uimei.model.dbo.wx.TWxReply;
 
 public interface TWxReplyMapper {
@@ -16,4 +18,6 @@ public interface TWxReplyMapper {
     int updateByPrimaryKeyWithBLOBs(TWxReply record);
 
     int updateByPrimaryKey(TWxReply record);
+    
+    List<TWxReply> findForList(TWxReply record);
 }

@@ -1,2 +1,3 @@
-content-types/org.eclipse.jst.jsp.core.jspfragmentsource/file-extensions=jsff
+content-types/org.eclipse.jst.jsp.core.jspfragmentsource/charset=utf-8
+content-types/org.eclipse.jst.jsp.core.jspfragmentsource/file-extensions=jsff,ftl
 eclipse.preferences.version=1

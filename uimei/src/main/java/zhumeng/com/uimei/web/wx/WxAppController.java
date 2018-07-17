@@ -97,7 +97,12 @@ public class WxAppController{
 			HttpServletResponse response,TWxApp t) throws Exception {
 		// TODO Auto-generated method stub
 		try{
-			 wxAppService.save(t);
+			if(t.getId()!=null){
+				 wxAppService.update(t);
+			}else{
+				 wxAppService.save(t);	
+			}
+			
 			 request.setAttribute("message", "保存成功!");
 		}catch(Exception e){
 			e.printStackTrace();

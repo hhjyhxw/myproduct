@@ -1,0 +1,22 @@
+package zhumeng.com.uimei.service.wx.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import zhumeng.com.uimei.dao.wx.TWxAppMapper;
+import zhumeng.com.uimei.model.dbo.wx.TWxApp;
+import zhumeng.com.uimei.service.wx.TWxAppService;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+
+@Service
+public class TWxMenuServiceImpl implements TWxAppService{
+
+	@Autowired 
+	private TWxAppMapper wxAppMapper;
+	
+	
+}

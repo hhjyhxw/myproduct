@@ -142,4 +142,27 @@
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where ID = #{id,jdbcType=BIGINT}
   </update>
+  
+     <select id="findForList" parameterType="zhumeng.com.uimei.model.dbo.wx.TWxReply" resultMap="BaseResultMap">
+		 select
+		 <include refid="Base_Column_List" />
+   		 from t_wx_reply t
+		<where>
+     		 <if test="id != null" >
+      		  	and t.id =  #{id,jdbcType=BIGINT}
+     		 </if>
+     		 <if test="appId != null" >
+      		  	and t.app_id =  #{appId,jdbcType=BIGINT}
+     		 </if>
+     		 <if test="msgKey != null and msgKey !='' " >
+      		  		and t.msg_key =  #{msgKey,jdbcType=BIGINT}
+     		 </if>
+     		 <if test="msgType != null and msgType !='' " >
+      		  		and t.msg_type =  #{msgType,jdbcType=BIGINT}
+     		 </if>
+     		  <if test="msgEvent != null and msgEvent !='' " >
+      		  		and t.msg_event =  #{msgEvent,jdbcType=BIGINT}
+     		 </if>
+		</where>
+	</select>
 </mapper>

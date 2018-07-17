@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import zhumeng.com.uimei.common.ConfigUtil;
 import zhumeng.com.uimei.model.dbo.wx.TWxImageText;
@@ -36,12 +37,14 @@ public class WeixinMaterialController{
 	private TWxImageTextService weixinMaterialService;
 
 	@RequestMapping(value = "/weixin_material_list")
-	public String list(HttpServletRequest request,Integer pageNo,Integer pageSize)throws Exception {
+	public String list(HttpServletRequest request,Integer pageNo,Integer pageSize,Long wxAppId)throws Exception {
 		TWxImageText t = new TWxImageText();
 		t.setParentId(0L);
+		t.setAppId(wxAppId);
 		PageInfo<TWxImageText> page = weixinMaterialService.findByPage(pageNo!=null?pageNo:1,pageSize!=null?pageSize:10, t);
 		request.setAttribute("p", page);
-		request.setAttribute("weixinMaterial",t);
+		request.setAttribute("wxAppId",wxAppId);
+		request.setAttribute("p", page);
 		return "wx/weixin_material_list";
 	}
 
@@ -51,9 +54,10 @@ public class WeixinMaterialController{
 	 * @return
 	 */
 	@RequestMapping(value = "/beforeAddWeixinMaterial")
-	public String beforeAddWeixinMaterial(HttpServletRequest request) {
+	public String beforeAddWeixinMaterial(HttpServletRequest request,Long wxAppId) {
 		request.setAttribute("list",new ArrayList<TWxImageText>());
 		request.setAttribute("wm",new TWxImageText());
+		request.setAttribute("wxAppId",wxAppId);
 		return "wx/weixin_material_input";
 	}
 
@@ -64,14 +68,16 @@ public class WeixinMaterialController{
 	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/beforeEditWeixinMaterial")
-	public String beforeEditWeixinMaterial(HttpServletRequest request,Long id) throws Exception {
+	public String beforeEditWeixinMaterial(HttpServletRequest request,Long id,Long wxAppId) throws Exception {
 		TWxImageText wm = null;
 		if (id!=null){
 			wm = weixinMaterialService.findByKey(id);
 		}
 		request.setAttribute("wm",wm!=null?wm:new TWxImageText());
+		request.setAttribute("wxAppId",wxAppId);
 		TWxImageText paramWeixinMaterial = new TWxImageText();
 		paramWeixinMaterial.setParentId(id);
+		paramWeixinMaterial.setAppId(wxAppId);
 		List<TWxImageText> list = weixinMaterialService.findList(paramWeixinMaterial);
 		request.setAttribute("list",list!=null?list:new ArrayList<TWxImageText>());
 		return "wx/weixin_material_input";
@@ -132,14 +138,14 @@ public class WeixinMaterialController{
 	 * @return
 	 */
 	@RequestMapping(value = "/saveWeixinMaterial")
-	public String saveWeixinMaterial(HttpServletRequest request,Long[] id){
+	public String saveWeixinMaterial(HttpServletRequest request,Long[] id,Long wxAppId){
 		String[] titles = request.getParameterValues("title");
 		String[] newsImages = request.getParameterValues("news_images");
 		String[] descriptions = request.getParameterValues("description");
 		String[] urls = request.getParameterValues("news_url");
 
 		try {
-			weixinMaterialService.saveWeixinMaterial(titles, newsImages, descriptions, urls,id,request);
+			weixinMaterialService.saveWeixinMaterial(titles, newsImages, descriptions, urls,id,request,wxAppId);
 			return "redirect:"+ConfigUtil.get("backPath")+"/wxImageText/weixin_material_list";
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -178,4 +184,39 @@ public class WeixinMaterialController{
 		return "redirect:"+ConfigUtil.get("backPath")+"/wxImageText/weixin_material_list";
 	}
 	
+	
+	/**
+	 * 添加菜单，读取图文素材
+	 * @param tWxImageText
+	 * @param model
+	 * @param PageSize
+	 * @param PageIndex
+	 * @param id
+	 * @param redirectAttributes
+	 * @return
+	 * @throws Exception 
+	 */
+	@ResponseBody	
+	@RequestMapping(value = "getwxImageTextListForMenu")
+	public Object getwxImageTextListForMenu(TWxImageText tWxImageText,
+			String model,Integer PageSize,Integer PageIndex,
+			Long id,RedirectAttributes redirectAttributes,Long wxAppId) throws Exception {
+		if ("list".equals(model)) {// 列表 都是至获取父类
+			tWxImageText.setAppId(wxAppId);
+			TWxImageText parent = new TWxImageText();
+			parent.setId(0L);
+			tWxImageText.setParent(parent);
+			PageInfo<TWxImageText> page = weixinMaterialService.findByPage(PageIndex!=null?PageIndex:1,PageSize!=null?PageSize:10, tWxImageText);
+			
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("p", page);
+			map.put("data", page.getList());
+			return map;
+		} else if ("show".equals(model)) {// 单独的一个图文详情
+			if(id!=null){
+				return weixinMaterialService.findByKey(id);
+			}
+		}
+		return null;
+	}
 }

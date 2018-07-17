@@ -60,6 +60,15 @@
 								 	<button class="layui-btn layui-btn-small" onclick="toEdit(${t.id})">
 								    	<i class="layui-icon">&#xe642;</i>&nbsp;编辑
 								  	</button>
+								  	<button class="layui-btn layui-btn-small" onclick="toWxMenu(${t.id})">
+								    	<i class="layui-icon">&#xe642;</i>&nbsp;微信菜单
+								  	</button>
+								  	<button class="layui-btn layui-btn-small" onclick="toReply(${t.id})">
+								    	<i class="layui-icon">&#xe642;</i>&nbsp;自定义回复
+								  	</button>
+								  		<button class="layui-btn layui-btn-small" onclick="toWximgaeAndText(${t.id})">
+								    	<i class="layui-icon">&#xe642;</i>&nbsp;素材管理
+								  	</button>
 									<#--
 								  	<button class="layui-btn layui-btn-small" onclick="delById(${t.id})">
 								    	<i class="layui-icon">&#xe640;</i>&nbsp;删除
@@ -174,6 +183,16 @@
 			function toEdit(id){
 				window.location.href = "${basePath}/${backPath}/wxApp/toinput?id="+id;
 			}
+			function toWxMenu(id){
+				window.location.href = "${basePath}/${backPath}/weixinMenu/beforeAddWxMenu?wxAppId="+id;
+			}
+			function toReply(id){
+				window.location.href = "${basePath}/${backPath}/wxReply/list?wxAppId="+id;
+			}
+			function toWximgaeAndText(id){
+				window.location.href = "${basePath}/${backPath}/wxImageText/weixin_material_list?wxAppId="+id;
+			}
+			
 			//删除
 			function delById(id){
 				if(confirm("确定要删除？")){

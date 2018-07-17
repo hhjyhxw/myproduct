@@ -1,0 +1,930 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="/WEB-INF/views/include/taglib.jsp"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<html>
+<head>
+<title>自定义菜单管理</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<script src="${ctxStatic}/modules/business/wx/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<link href="${ctxStatic}/modules/business/wx/css/sub_style.css" rel="stylesheet" type="text/css" />
+<link href="${ctxStatic}/modules/business/wx/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="${ctxStatic}/modules/business/wx/css/demo.css?i=013" type="text/css">
+<link rel="stylesheet" href="${ctxStatic}/modules/business/wx/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<script src="${ctxStatic}/modules/business/wx/js/jquery-ui.js" type="text/javascript"></script>
+<script src="${ctxStatic}/modules/business/wx/js/emotion.js" type="text/javascript"></script>
+<script type="text/javascript" src="${ctxStatic}/modules/business/wx/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript">	 
+	 /*修改菜单类型*/
+	 function changeMenuType(){
+		var obj = document.getElementById("_genre");
+		var index = obj.selectedIndex;
+		var value = obj.options[index].value; 
+		var urlinput = document.getElementById("urlinput");
+		var keyinput = document.getElementById("keyinput");
+		//1 视图
+		if("1"==value){
+			urlinput.style.display = "table-row";
+			keyinput.style.display = "none";
+		}
+		//2 事件
+		if("2"==value){
+			urlinput.style.display = "none";
+			keyinput.style.display = "table-row";
+		}
+	}
+	/*修改菜单级别*/
+	function  changeMenuLeve(){
+		var obj = document.getElementById("_leve");
+		var index = obj.selectedIndex;
+		var value = obj.options[index].value;
+		
+		var _parent = document.getElementById("_parentId");
+		if(value=='1'){//一级菜单
+			_parent.options[0].selected=true;
+			_parent.setAttribute("disabled", true);//disabled="disabled"
+		}else if(value=='2'){//二级菜单
+			_parent.removeAttribute("disabled");
+		}
+	} 
+	/*提交表单*/
+	function onSubmitAction(){
+	 	if($("#_meunName").val()==""){
+	 		window.alert("菜单名称不能为空！");
+	 		$("#_meunName").focus();
+	 		return false;
+	 	}
+		var obj = document.getElementById("_genre");
+		var index = obj.selectedIndex;
+		var value = obj.options[index].value;
+		if("1"==value){
+		 	if($("#_url").val().length<=7){
+		 	window.alert("菜单类型为视图时一定要输入打开的URL,否则菜单发布会失败！");
+		 		$("#_url").focus();
+		 		return false;
+		 	}
+		 	return true;
+		 }
+		 return true;	
+	 }	
+	
+		var setting = {
+			view: {
+				showIcon: showIconForTree
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			 <c:forEach items="${menu}" var="m" varStatus="s">
+			 <c:if test="${m.parent.id==0}">
+				 {id:${s.index+1},pId:${m.parent.id},
+					name:"${m.name}",<c:if test="${m.parent.id==0}">open:true</c:if>,url:"${ctx}/wx/wxMenu/beforeEditWxMenu?id=${m.id}&wxAppId=${m.appId}",
+					target:"_self"
+				 },
+				 <c:forEach items="${menu}" var="p" varStatus="x">
+				 	<c:if test="${p.parent.id==m.id}">
+						 {id:${s.index+1}${x.index+1},pId:${s.index+1},
+							name:"${p.name}",open:true,url:"${ctx}/wx/wxMenu/beforeEditWxMenu?id=${p.id}&wxAppId=${p.appId}",
+							target:"_self"
+						},
+				 	</c:if>
+				</c:forEach>
+			 </c:if>
+			</c:forEach>
+			<c:if test="${fn:length(menu)==0}">
+				{id:1,pId:0, name:"点此创建,自定义菜单",url:"${ctx}/wx/wxMenu/beforeAddWxMenu?wxAppId=${wxAppId}", target:"_self"}
+			</c:if> 
+		];
+
+		function showIconForTree(treeId, treeNode) {
+			return !treeNode.isParent;
+		};
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+
+
+
+	function jump(url){
+		var e = document.createElement("a");
+		e.href = url;
+		document.body.appendChild(e);
+		e.click();
+	}
+	function delete_(url){
+		if(confirm("您确定删除菜单\'"+document.getElementById("menuName").value+"\'吗")){
+			url=url+"?id="+document.getElementById("menuId").value+"&wxAppId=${wxAppId}";
+			jump(url);
+		}
+	}			
+	</script>
+</head>
+
+<body>
+	<input type="hidden" value="${wxAppId}" id="wxAppId"  name="wxAppId"/>
+	<sys:message content="${message}"/>
+	<input type="button" name="menuId" id="menuId" value="${m.id}" />
+	<input type="button" name="menuName" id="menuName" value="${m.name}" />
+	<div id="box_main" class="hig">
+		<!--main_top注释-->
+		<div class="main_top co7">
+			<div class="Mix_W600">
+				<div id="submain"
+					style="height: 567px; width: 1036px;margin-top: 30px;">
+					<div class="hig border">
+						<h1 class="tit2 co1 left">自定义菜单设置</h1>
+					</div>
+					<div class="manage co3 size bgco3">
+						<p>
+							1、使用本模块，必须在微信公众平台申请自定义菜单使用的AppId和AppSecret，然后在<a
+								href="#" class="co4">【授权设置】</a>中设置。
+						</p>
+						<p>2、3 个一级菜单，每个一级菜单下最多可以创建 5 个二级菜单，菜单最多支持两层。</p>
+						<p>
+							3、公众平台规定，菜单发布<em class="co4">24小时</em>后生效。如果为新增粉丝，则可马上看到菜单。公众平台限制了每天的发布<em
+								class="co4">100次</em>。
+						</p>
+						<p>
+							4、修改<em class="co4">菜单名称</em>、<em class="co4">菜单排序</em>必须重新发布后才生效，修改<em
+								class="co4">回复类型</em>，不需要重新发布。
+						</p>
+					</div>
+					<div class="clear"></div>
+					<div class="con">
+						<div class="top co1">
+							<input type="button" name="ctl00$cph$lkbtnAdd" value="新增菜单"
+								id="cph_lkbtnAdd" class="greenbtn100"
+								onclick="jump('${ctx}/wx/wxMenu/beforeAddWxMenu?wxAppId=${wxAppId}');" />
+							<input type="button" name="ctl00$cph$btnIssue" value="发布菜单"
+								id="cph_btnIssue" class="greenbtn100"
+								onclick="jump('${ctx}/wx/wxMenu/publicWxMenu?wxAppId=${wxAppId}');" />
+							<input type="button" name="ctl00$cph$btnDelNav" value="删除微信菜单"
+								onclick="jump('${ctx}/wx/wxMenu/releaseMenu?wxAppId=${wxAppId}');"
+								id="cph_btnDelNav" class="greenbtn100" />
+							<input type="button" name="ctl00$cph$btnDelNav" value="删除本地菜单"
+								onclick="delete_('${ctx}/wx/wxMenu/deleteWxMenu');"
+								id="cph_btnDelNav" class="greenbtn100" />
+						</div>
+						<div class="clear"></div>
+						<div class="top co1 left menu">
+							<div id="cph_tvMenu" class="co1">
+								<ul id="treeDemo" class="ztree" style="margin-top: 20px;"></ul>
+							</div>
+						</div>
+
+						<form:form
+							action="${ctx}/wx/wxMenu/saveWxMenu"
+							method="post">
+							<div class="reply top size  left menuedit"
+								style="margin: 20px;margin-left: 40px;width:auto; overflow:auto; ">
+
+								<input name="id" value="${m.id}" type="hidden" /> <input
+									name="msgEvent" value="CLICK" type="hidden" />
+								<!-- 事件类型 -->
+								<input name="sid" value="${res.id }" type="hidden" />
+								<input type="hidden" value="${wxAppId}" id="wxAppId"  name="wxAppId"/>
+
+								<div class="hig border">
+									<h1 class="tit2 co1 left">新增自定义菜单</h1>
+								</div>
+								<div class="clear"></div>
+								<div class="con">
+									<div class="clear"></div>
+									<div class="reply top size">
+										<div class="hig">
+											<dl>
+												<dt class="left co1 ddwid">菜单名称：</dt>
+												<dd class="left mL20">
+													<input name="name" type="text" maxlength="20"
+														id="_meunName" value="${m.name }" class="input200" />
+													<span class="co4">*必填</span> <span class="co2"></span>
+												</dd>
+											</dl>
+											<div class="clearh"></div>
+											<dl>
+												<dt class="left co1 ddwid">菜单级别：</dt>
+												<dd class="left mL20">
+													<select name="menuLevel" id="_leve" onchange="changeMenuLeve();">
+														<option value="1"
+															<c:if test="${m.menuLevel=='1' }">selected="selected"</c:if>>一级菜单</option>
+														<option value="2"
+															<c:if test="${m.menuLevel=='2' }">selected="selected"</c:if>>二级子菜单</option>
+													</select> <span class="co4">*必选</span> <span class="co2"></span>
+												</dd>
+											</dl>
+											<div class="clearh"></div>
+											<dl>
+												<dt class="left co1 ddwid">所属菜单：</dt>
+												<dd class="left mL20">
+													<select name="parent.id" id="_parentId">
+														<option value="0" selected="selected">无</option>
+
+														<c:forEach items="${list}" var="c">
+															<c:if test="${c.id!=m.id }">
+
+																<option value="${c.id }"
+																	<c:if test="${m.parent.id==c.id }">selected="selected"</c:if>>${c.name}</option>
+																	
+															</c:if>
+														</c:forEach>
+
+													</select><span class="co4">*必填</span> <span class="co2">菜单级别为一级时，不存在所属菜单。</span>
+												</dd>
+											</dl>
+											<div class="clearh"></div>
+											<dl>
+												<dt class="left co1 ddwid">菜单排序：</dt>
+												<dd class="left mL20">
+													<input name="orderNo" id="_sortNum" type="text"
+														maxlength="20" value="${m.orderNo }" class="input200" />
+													<span class="co4">*必填</span> <span class="co2">不可重复，且纯数字。</span>
+												</dd>
+											</dl>
+											<div class="clearh"></div>
+											<dl>
+												<dt class="left co1 ddwid">是否使用：</dt>
+												<dd class="left mL20">
+													<select name="isUse">
+														<option value="1"
+															<c:if test="${m.isUse=='1' }">selected="selected"</c:if>>使用</option>
+														<option value="0"
+															<c:if test="${m.isUse=='0' }">selected="selected"</c:if>>停用</option>
+													</select> <span class="co4">*必选</span> <span class="co2">修改菜单的停用状态需重新发布至微信服务器。</span>
+												</dd>
+											</dl>
+											<div class="clearh"></div>
+											<dl>
+												<dt class="left co1 ddwid">菜单类型：</dt>
+												<dd class="left mL20">
+													<select name="menuType" id="_genre">
+														<option value="1" title="视图为点击之后开启一个页面"	selected="selected" <c:if test="${m.menuType=='1' }">selected="selected"</c:if>>视图</option>
+														<option value="2" <c:if test="${m.menuType=='2' }">selected="selected"</c:if> title="事件为点击之后等待服务器响应">事件</option>
+														<option value="3" <c:if test="${m.menuType=='3' }">selected="selected"</c:if> title="扫码跳转链接">扫码</option>
+														<option value="4" <c:if test="${m.menuType=='4' }">selected="selected"</c:if> title="跳转小程序">跳转小程序</option>
+														<!-- <option value="5" <c:if test="${m.menuType=='5' }">selected="selected"</c:if> title="扫码提示并等待服务器推送消息">扫码接收推送消息</option>  -->
+													</select> 
+													<span class="co4">*必选</span> <span class="co2">视图为直接打开一个网页，事件是响应消息给用户。</span>
+												</dd>
+											</dl>
+											<div class="clearh"></div>
+											<div id="_inputUrl" class="display_block"
+											
+												<c:choose>
+													<c:when test="${m.menuType=='1'}">
+														style="display: block;"
+													</c:when>
+													<c:when test="${m.menuType=='4'}">
+														style="display: block;"
+													</c:when>
+													<c:otherwise>
+														style="display: none;"
+													</c:otherwise>
+												</c:choose>
+												>
+												<dl>
+													<dt class="left co1 ddwid">视图的Url：</dt>
+													<dd class="left mL20">
+														<input name="url" id="_url" value="${m.url }"
+															maxlength="350" class="input200" /> <span class="co4">*必选</span>
+														<span class="co2">视图为直接打开一个网页，事件是响应消息给用户。</span>
+													</dd>
+												</dl>
+											</div>
+
+											<div id="_inputKey" class="display_none"
+												<c:choose>
+													<c:when test="${m.menuType=='2'}">
+														style="display: block;"
+													</c:when>
+													<c:when test="${m.menuType=='3'}">
+														style="display: block;"
+													</c:when>
+													<c:when test="${m.menuType=='5'}">
+														style="display: block;"
+													</c:when>
+													<c:otherwise>
+														style="display: none;"
+													</c:otherwise>
+												</c:choose>
+												>
+												<dl>
+													<dt class="left co1 ddwid">回复类型：</dt>
+													<dd class="left mL20">
+														<select name="msgType" id="cph_ddlreply_form">
+															<option value="null" selected="selected">请选择回复内容</option>
+															<option value="1"
+																<c:if test="${res.msgType=='1'}">selected="selected" </c:if>>文本</option>
+															<option value="2"
+																<c:if test="${res.msgType=='2'}">selected="selected" </c:if>>图文</option>
+														</select>
+													</dd>
+												</dl>
+											</div>
+											
+											<div class="clearh"></div>
+											<div id="_inputXxx" class="display_block"
+												<c:choose>
+													<c:when test="${m.menuType=='4' }">
+														style="display: block;"
+													</c:when>
+													<c:otherwise>
+														style="display: none;"
+													</c:otherwise>
+												</c:choose>
+												>
+												
+												<dl>
+													<dt class="left co1 ddwid">小程序appid：</dt>
+													<dd class="left mL20">
+														<input name="xcxAppid" id="xcxAppid" value="${m.xcxAppid }"
+															maxlength="350" class="input200" /> <span class="co4">*必选</span>
+														<span class="co2"></span>
+													</dd>
+												</dl>
+												<dl>
+													<dt class="left co1 ddwid">小程序pagepath：</dt>
+													<dd class="left mL20">
+														<input name="pagepath" id="pagepath" value="${m.pagepath }"
+															maxlength="350" class="input200" /> <span class="co4">*必选</span>
+														<span class="co2">跳转小程序页面,如"pages/index/index"</span>
+													</dd>
+												</dl>
+											</div>
+											
+											
+											<div class="clearh"></div>
+											<div id="textreply" 
+												<c:choose>
+													<c:when test="${m.menuType=='2'}">
+														style="display: block;"
+													</c:when>
+													<c:when test="${m.menuType=='3'}">
+														style="display: block;"
+													</c:when>
+													<c:when test="${m.menuType=='5'}">
+														style="display: block;"
+													</c:when>
+													<c:otherwise>
+														style="display: none;"
+													</c:otherwise>
+												</c:choose>
+												>
+												<dl>
+													<dt class="left co1 ddwid">自动回复内容：</dt>
+													<dd class="left mL20 ddsty">
+														<!--  
+														<div class="ddtit">
+															<a class="html_txet" title="源代码">HTML</a><a
+																onclick="linkText();" class="link co5"
+																href="javascript:void(0);"> <img
+																src="${ctxStatic}/modules/business/wx/images/img3.jpg" />超链接</a>
+														</div>
+														-->
+														<div class="ddcont editArea">						
+														
+															<textarea name="content" rows="2" cols="20"
+																id="cph_txtwelcome" value="" class="display_none"
+																style="border-radius: 2px; width: 498px; height: 80px">${res.replyMsg }</textarea>
+															<div class="textarea" contenteditable="true">
+																<!-- <img src="56.gif" alt="mo-西瓜"> -->
+																${res.replyMsg }
+															</div>
+														</div>
+													</dd>
+												</dl>
+												<div class="clearh"></div>
+												<dl>
+													<dt class="left co1 ddwid">&nbsp;</dt>
+													<dd class="left mL20">
+														<font class="co6"><em class="co4 ml20 pdr10 pdl100">*</em>必填</font>
+													</dd>
+												</dl>
+											</div>
+
+											<div id="multiArticle" class="display_none "
+												style="display: none;">
+												<dl>
+													<dt class="left co1 ddwid">自动回复图文：</dt>
+													<dd class="left mL20 ddsty co1">
+														<div class="ddtit">
+															<input value="选择图文" id="ArticleShow" class="inputbgr3"
+																type="button" onclick="return ArticleShow_onclick()" />
+														</div>
+														<div class="ddcont">
+															<div class="msg-item"></div>
+															<input id="cph_hfNewsId" value="" name="mid"
+																type="hidden" />
+														</div>
+													</dd>
+												</dl>
+											</div>
+
+											<div id="duokefu" class="display_none co2"
+												style="display: none;">使用多客服系统，需要微信公众开通高级接口，并下载多客服客户端程序</div>
+										</div>
+										<div class="clearh"></div>
+									</div>
+								</div>
+								<div class="dlsty bgco6">
+									<input type="submit" name="ctl00$cph$btnUpd" value="保存"
+										onclick="return GetBtn();" id="cph_btnUpd" class="greenbtn100" />
+
+								</div>
+
+
+	<script type="text/javascript">
+        var $textarea = $(".editArea textarea");
+        var $contentDiv = $(".editArea div");
+        var $answertype = $("#cph_ddlreply_form");
+        var $NewsId = $("#cph_hfNewsId");
+
+        //回复类型切换界面
+        function GetType(n) {
+            $("#textreply").hide();
+            $("#multiArticle").hide();
+            $("#duokefu").hide();
+           // $("#_business").hide();
+            if (n == "mainMenu") {
+                //$("#mpmenu").show();
+            } else if (n == "1") {//文本
+                $("#textreply").show();
+            } else if (n == "2") {//图文
+                $("#multiArticle").show();
+                var r = /^\+?[1-9][0-9]*$/;
+                if(r.test('${res.replyMsg}')){
+                	 GetBindDataShow(${res.replyMsg});
+                }
+            } else if(n=="business"){
+            	$("#_business").show();
+            }else{
+           		 $("#textreply").hide();
+            	$("#multiArticle").hide();
+            	$("#duokefu").hide();
+            	$("#_business").hide();
+            }
+        }
+
+		//提交数据时
+        function GetBtn() {
+            if ($("#_meunName").val() == "") {
+                alert("菜单名不能为空！");
+                $("#_meunName").focus();
+                return false;
+            }
+            else if (parseInt($("#_sortNum").val()) != $("#_sortNum").val()) {
+                alert("菜单排序只能为数字！");
+                $("#_sortNum").focus();
+                return false;
+            }
+            if($("#_genre").val()=="1"){//1 视图，2事件
+	             if($("#_url").val()==""){
+	             	 alert("视图类型的菜单，URL不能为空！");
+	                 $("#_url").focus();
+	                return false;
+	             }
+            }
+            if($("#_genre").val()=="3"){//3 扫码跳转的url，
+             if($("#_url").val()==""){
+             	 alert("URL不能为空！");
+                 $("#_url").focus();
+                 
+                return false;
+             }
+              
+            }
+             if($("#_genre").val()=="4"){//4跳转小程url
+	             if($("#_url").val()==""){
+	             	 alert("URL不能为空！");
+	                 $("#_url").focus();
+	                return false;
+	             }
+	             if($("#pagepath").val()==""){
+	             	 alert("pagepath不能为空！");
+	                 $("#pagepath").focus();
+	                 
+	                return false;
+	             }
+	             if($("#xcxAppid").val()==""){
+	             	 alert("xcxAppid不能为空！");
+	                 $("#xcxAppid").focus();
+	                 
+	                return false;
+	             }
+            }
+            return true;
+        }
+        
+	function changeType(n){
+		$("#_inputUrl").hide();
+		$("#_inputKey").hide();
+		$("#_inputXxx").hide();
+		if(n=="1" || n=="4"){//1视图  3扫码跳转url 4跳转小程序
+			if(n=="4"){
+				$("#_inputXxx").show();
+			}
+			$("#_inputUrl").show();
+			GetType("null");
+		}else if(n=="2" ||  n=="3" || n=="5"){//事件,扫码提示
+			$("#_inputKey").show();
+		}
+	}
+		
+	
+        $(function () {
+	
+            $textarea.change(function () {
+                $contentDiv.html(Emotion.replaceEmoji($(this).val()));
+                $(this).height($contentDiv.height());
+            })
+
+            $(".html_txet").click(function () {
+                $(this).toggleClass("html_txet_co");
+                $textarea.toggle();
+                $contentDiv.toggle();
+                $textarea.height($contentDiv.height());
+                $('.phiz').toggle();
+                $('.link').toggle();
+            })
+            if ($NewsId.val() != "0" && $answertype.val() == "2") {//图文
+                GetBindDataShow($NewsId.val());
+            }
+
+            $contentDiv.html(Emotion.replaceEmoji($textarea.val()));
+            GetType($answertype.val());
+
+            $("#cph_ddlreply_form").change(function () {
+                GetType($(this).val());
+            });
+	            
+	     $("#_genre").change(function(){
+	     	 changeType($(this).val());
+	     });
+            //===========表情============
+            $(".ddtit .phiz").click(function () {
+                $(".emotions").show();
+            });
+            $(".emotions").hover(function () {
+
+            }, function () {
+                $(".emotions").fadeOut();
+            });
+            $(".emotions .eItem").mouseenter(function () {
+                $(".emotionsGif").html('<img src="' + $(this).attr("data-gifurl") + '">');
+            }).click(function () {
+                Emotion.insertHTML('<img src="' + $(this).attr("data-gifurl") + '"' + 'alt="mo-' + $(this).attr("data-title") + '"' + "/>");
+                $(".emotions").fadeOut();
+                $textarea.trigger("contentValueChange");
+
+            });
+            $contentDiv.bind("keyup", function () {
+                $textarea.trigger("contentValueChange");
+                Emotion.saveRange();
+            }).bind("keydown", function (e) {
+                switch (e.keyCode) {
+                    case 8:
+                        var t = Emotion.getSelection();
+                        t.type && t.type.toLowerCase() === "control" && (e.preventDefault(), t.clear());
+                        break;
+                    case 13:
+                        e.preventDefault(),
+                Emotion.insertHTML("<br/>");
+                        Emotion.saveRange();
+                }
+            }).bind("mouseup", function (e) {
+                Emotion.saveRange();
+                if ($.browser.msie && />$/.test($contentDiv.html())) {
+                    var n = Emotion.getSelection();
+                    n.extend && (n.extend(cursorNode, cursorNode.length), n.collapseToEnd()),
+                Emotion.saveRange();
+                    Emotion.insertHTML(" ");
+                }
+            });
+            $textarea.bind("contentValueChange", function () {
+                $(this).val(Emotion.replaceInput($contentDiv.html()));
+            });
+            $contentDiv.html(Emotion.replaceEmoji($contentDiv.html()));
+            //===========end表情============
+
+
+            //=============超链接============
+            
+           
+             $(".ddtit .link").click(function () { 
+
+               var _con = Emotion.getSelectionContents(); 
+               var _url = "http://";
+               var pattern = /<a.*?href=["]{0,1}([^"\s]*).*?>/ig;
+               var mts = pattern.exec(_con);
+                if (mts != null) {
+                    _url = mts[1];
+                }  
+
+                $("#txtUrl").val(_url);
+              
+                $("#txtCon").html(_con.replace(/<br.*?>/ig, " ").replace(/<a.*?>/ig, "").replace(/<\/a>/ig, "")); 
+                $("#hyperlink").dialog("open");
+
+            });
+            $("#hyperlink").dialog({
+                autoOpen: false,
+                resizable: false,
+                modal: false,
+                width: 470,
+                height: 300,
+                buttons: {
+                    "确定": function () {
+                        var strCon = $("#txtCon").html();
+                        var strUrl = $("#txtUrl").val();
+                        var strHtml = strCon;
+                        if (strUrl != "" && strUrl != "http://") {
+                            if (strCon == "") {
+                                strCon = strUrl;
+                            }
+                            strHtml = '<a href="' + strUrl + '">' + strCon + '</a>';
+                        }
+                        Emotion.insertHTML(strHtml);
+                        $textarea.trigger("contentValueChange");
+                        $(this).dialog("close");
+                    },
+                    "取消": function () { $(this).dialog("close"); }
+                }
+            });
+           
+            //===========超链接============
+
+
+            //===========图文列表============  
+
+
+            $("#ArticleShow").click(function () {
+                $("#ArticleListShow").dialog("open");
+                $(".allArticles").html("<li>数据加载中。。。</li>");
+                GetBindData(1);
+            });
+
+            $("#ArticleListShow").dialog({
+                autoOpen: false,
+                resizable: false,
+                resizable: true,
+                modal: true,
+                minWidth: 480,
+                minHeight: 380,
+                width: 550,
+                height: 400,
+                buttons: {
+                    "确定": function () {
+                   
+                        if ($(':radio[name="id"]:checked').length > 0) {
+                            var id = ($(':radio[name="id"]:checked').val());
+                           
+                            GetBindDataShow(id);
+                        }
+                        $(this).dialog("close");
+                    },
+                    "取消": function () { $(this).dialog("close"); }
+                }
+            });
+            //===========end图文列表============
+        });
+
+
+        //===========读取图文列表============
+        function GetBindData(PageIndex) {
+            $.ajax({
+                type: "POST",
+                url: "${ctx}/wx/wxImageText/getwxImageTextListForMenu",
+                data: { "model": "list", "PageSize": "30", "PageIndex": PageIndex,"wxAppId":"${wxAppId}"},
+                timeout: "10000",
+                dataType: "text",
+                error: function () {
+                    $(".allArticles").html("<li>服务器繁忙，请稍后重试</li>");
+                },
+                success: function (dt) {
+                
+                var d = eval('(' + dt + ')');
+               
+                    $(".allArticles").html("");
+                    $("#PageInfo").html("(当前第" + d.p.pageNo + "/" + d.p.last + "页 共" + d.p.count + "条记录)");
+                    $(d.data).each(function () {
+                        var ss_imagetext = "only-imagetext";
+                        if (this.img_num > 1) {
+                            ss_imagetext = "more-imagetext";
+                        }
+                        $(".allArticles").append("<li class='" + ss_imagetext + "' title='" + decodeURIComponent(this.title) + "'><img src='" +"${ctxRoot}" + this.picUrl + "' /><div class='testradio'><input id='" + this.id + "' name='id' value='" + this.id + "' type='radio'><label for='" + this.id + "'>" + decodeURIComponent(this.title).substring(0, 10) + "</label></div></li>");
+                    });
+
+                   //分页
+                    $(".page").html("");
+                    if (d.p.pageNo - 1 > 0) {
+                        $(".page").append("<a href='javascript:GetBindData(" + (d.p.pageNo - 1) + ");'>上一页</a>");
+                    }
+                    else {
+                        $(".page").append("<a>上一页</a>");
+                    }
+                    for (i = 1; i <= d.p.totalPage; i++) {
+
+                        if (i == d.p.currPage) {
+                            $(".page").append("<a class='hover'>" + i + "</a>");
+                        } else {
+                            $(".page").append("<a href='javascript:GetBindData(" + i + ");'>" + i + "</a>");
+                        }
+                    }
+                    if (d.p.pageNo < d.p.last) {
+                        $(".page").append("<a href='javascript:GetBindData(" + (d.p.pageNo + 1) + ");'>下一页</a>");
+                    }
+                    else {
+                        $(".page").append("<a >下一页</a>");
+
+                    }
+
+                }
+            });
+        }
+        //===========end读取图文列表============
+
+
+
+        //===========读取图文详情============
+        function GetBindDataShow(id) {
+       
+            $.ajax({
+                type: "POST",
+                url: "${ctx}/wx/wxImageText/getwxImageTextListForMenu",
+                data: { "model": "show", "id": id,"wxAppId":"${wxAppId}"},
+                timeout: "10000",
+                dataType: "text",
+                error: function () {
+                    alert("服务器繁忙，请稍后重试");
+                },
+                success: function (data) {
+                 var data = eval('(' + data + ')');
+                    var strHtml = "";
+                    strHtml += "<div id='appmsgItem1' class='appmsgItem'>";
+                    strHtml += "    <p class='multi-msg'>";
+                    strHtml += "        <span class='msg-date'>" + "</span>";
+                    strHtml += "    </p>";
+                    strHtml += "    <div class='cover'>";
+                    strHtml += "        <h4 class='msg-t'>";
+                    strHtml += "            <a href='" + data.vistedUrl + "' class='i-title' target='_blank'>" + decodeURIComponent(data.title) + "</a>";
+                    strHtml += "        </h4>";
+                    strHtml += "        <img src='" +"${ctxRoot}" + data.picUrl + "' class='i-img'>";
+                    strHtml += "    </div>";
+                    strHtml += "</div>";
+
+                   strHtml += "<div class='msg-text' >" + decodeURIComponent(data.description) + "</div>";
+                   /*  if (data.img_num == 1) {
+                        strHtml += "<div class='msg-text' >" + decodeURIComponent(data.description) + "</div>";
+                    }
+                    else {
+                        strHtml += GetItemHtml(2, data.img_2, data.url_2, data.title_2);
+                        strHtml += GetItemHtml(3, data.img_3, data.url_3, data.title_3);
+                        strHtml += GetItemHtml(4, data.img_4, data.url_4, data.title_4);
+                        strHtml += GetItemHtml(5, data.img_5, data.url_5, data.title_5);
+                        strHtml += GetItemHtml(6, data.img_6, data.url_6, data.title_6);
+                        strHtml += GetItemHtml(7, data.img_7, data.url_7, data.title_7);
+                        strHtml += GetItemHtml(8, data.img_8, data.url_8, data.title_8);
+                    } */
+                    $("#multiArticle .msg-item").html(strHtml);
+                    $("#cph_hfNewsId").val(id);
+                }
+            });
+        }
+
+        function GetItemHtml(n, img, url, title) {
+            var strHtml = "";
+            if (title != "") {
+                strHtml += "<div class='rel sub-msg-item appmsgItem'>";
+                strHtml += "    <div class='thumb'>";
+                strHtml += "        <img src='" + img + "' class='i-img'>";
+                strHtml += "    </div>";
+                strHtml += "    <h4 class='msg-t'>";
+                strHtml += "        <a href='" + url + "' target='_blank' class='i-title'>" + decodeURIComponent(title) + "</a>";
+                strHtml += "    </h4>";
+                strHtml += "</div>";
+            }
+            return strHtml;
+        }
+ 
+   </script>
+								<div id="message-reshow" style="display: none;">信息</div>
+							</div>
+						</form:form>
+
+						<div
+							class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable"
+							tabindex="-1" role="dialog" aria-describedby="hyperlink"
+							aria-labelledby="ui-id-1" style="display: none;">
+							<div
+								class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+								<span id="ui-id-1" class="ui-dialog-title">插入超链接</span>
+								<button
+									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"
+									role="button" aria-disabled="false" title="close">
+									<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span
+										class="ui-button-text">close</span>
+								</button>
+							</div>
+							<div id="hyperlink"
+								class="display_none ui-dialog-content ui-widget-content"
+								style="display: block;">
+								<div class="top">
+									<p>文本内容：</p>
+									<div contenteditable="true" id="txtCon" class="Link_Con"></div>
+								</div>
+								<div class="top">
+									<p>链接地址：</p>
+									<input id="txtUrl" type="text" class="input400" value="" />
+								</div>
+							</div>
+							<div
+								class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+								<div class="ui-dialog-buttonset">
+									<button type="button"
+										class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+										role="button" aria-disabled="false">
+										<span class="ui-button-text">确定</span>
+									</button>
+									<button type="button"
+										class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+										role="button" aria-disabled="false">
+										<span class="ui-button-text">取消</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div
+							class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable"
+							tabindex="-1" role="dialog" aria-describedby="ArticleListShow"
+							aria-labelledby="ui-id-2"
+							style="display: none; position: absolute;">
+							<div
+								class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+								<span id="ui-id-2" class="ui-dialog-title">选择图文消息</span>
+								<button
+									class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"
+									role="button" aria-disabled="false" title="close">
+									<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span
+										class="ui-button-text">close</span>
+								</button>
+							</div>
+							<div id="ArticleListShow"
+								class="display_none ui-dialog-content ui-widget-content"
+								style="display: block;">
+								<h3 class="page-sub-hd">
+									图文列表<span id="PageInfo"></span>
+								</h3>
+								<div class="page top"></div>
+								<ul class="allArticles">
+								</ul>
+							</div>
+							<div
+								class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+								<div class="ui-dialog-buttonset">
+									<button type="button"
+										class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+										role="button" aria-disabled="false">
+										<span class="ui-button-text">确定</span>
+									</button>
+									<button type="button"
+										class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+										role="button" aria-disabled="false">
+										<span class="ui-button-text">取消</span>
+									</button>
+								</div>
+							</div>
+							<div class="ui-resizable-handle ui-resizable-n"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-e"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-s"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-w"
+								style="z-index: 90;"></div>
+							<div
+								class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-sw"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-ne"
+								style="z-index: 90;"></div>
+							<div class="ui-resizable-handle ui-resizable-nw"
+								style="z-index: 90;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+package com.gxnnbsd.charger.wx.entity.menu;
+
+import com.gxnnbsd.modules.business.wx.entity.TWxMenu;
+
+public class BaseMenu {
+	
+	private String name;
+	
+	
+	
+	public BaseMenu(TWxMenu wxMenu) {
+		this.name=wxMenu.getName();
+	}
+
+	public BaseMenu() {
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+
+	
+	
+}

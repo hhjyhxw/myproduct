@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import zhumeng.com.uimei.common.ConfigUtil;
 import zhumeng.com.uimei.common.util.wx.FormUploadMultimediaUtil;
@@ -18,8 +19,8 @@ import zhumeng.com.uimei.service.wx.TWxImageTextService;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-
 @Service
+@Transactional
 public class TWxImageTextServiceImpl implements TWxImageTextService{
 
 	private static Logger logger = LoggerFactory.getLogger(TWxImageTextServiceImpl.class);
@@ -66,7 +67,7 @@ public class TWxImageTextServiceImpl implements TWxImageTextService{
 	 */
 	public void saveWeixinMaterial(String[] titles, String[] newsImages,
 			String[] descriptions, String[] urls, Long[] id,
-			HttpServletRequest request) {
+			HttpServletRequest request,Long wxAppId) {
 				//用于上传图片到微信服务器
 				FormUploadMultimediaUtil formUtil = new FormUploadMultimediaUtil();
 				String uplaoad_image = ConfigUtil.get("uplaoad_image");
@@ -94,6 +95,7 @@ public class TWxImageTextServiceImpl implements TWxImageTextService{
 							wm.setId(id[i]);
 						}
 					}
+					wm.setAppId(wxAppId);
 					wm.setTitle(titles[i]);
 //					wm.setPicUrl(newsImages[i]);
 					wm.setDescription(descriptions[i]);

@@ -17,12 +17,12 @@
 	 	}
 	 }
 	 //编辑
-	 function edit(id){
-	 	window.location.href="${basePath}/${backPath}/wxImageText/beforeEditWeixinMaterial?id="+id;
+	 function edit(id,wxAppId){
+	 	window.location.href="${basePath}/${backPath}/wxImageText/beforeEditWeixinMaterial?id="+id+"&wxAppId="+wxAppId;
 	 }
 	
-	 function addNews(){
-	 	window.location.href="${basePath}/${backPath}/wxImageText/beforeAddWeixinMaterial";
+	 function addNews(wxAppId){
+	 	window.location.href="${basePath}/${backPath}/wxImageText/beforeAddWeixinMaterial?wxAppId="+wxAppId;
 	 }
 	 
 	 function next(){
@@ -68,7 +68,7 @@
                 <tr>
                     <td>${m.title}</td>
                     <td>
-                        [<a href="javascript:edit('${m.id}')">编辑</a>]
+                        [<a href="javascript:edit('${m.id}','${m.appId}')">编辑</a>]
                         [<a title="删除" class="Del" href="javascript:delByid('${m.id}')">删除</a>]
                     </td>
                 </tr>
@@ -77,7 +77,7 @@
                 <tfoot>
                     <tr>
                         <td colspan="4" class="r">
-                            <input name="ctl00$cph$btnAdd" value="新增" onclick='addNews();' style="background:#0088cc;border: 1px solid #0088cc" id="cph_btnAdd" class="greenbtn100 mR20" type="button"/>
+                            <input name="ctl00$cph$btnAdd" value="新增" onclick='addNews(${(wxAppId)!});' style="background:#0088cc;border: 1px solid #0088cc" id="cph_btnAdd" class="greenbtn100 mR20" type="button"/>
                         </td>
                     </tr>
                 </tfoot>

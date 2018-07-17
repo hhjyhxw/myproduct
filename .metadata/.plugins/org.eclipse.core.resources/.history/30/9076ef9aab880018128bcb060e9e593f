@@ -1,0 +1,133 @@
+package zhumeng.com.uimei.web.wxserver.util;
+
+import java.util.Map;
+
+import jdk.nashorn.internal.objects.Global;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.connection.jedis.JedisUtils;
+
+import zhumeng.com.uimei.common.HttpUtils;
+import zhumeng.com.uimei.common.SpringContextHolder;
+import zhumeng.com.uimei.model.dbo.wx.TWxApp;
+import zhumeng.com.uimei.service.redis.RedisService;
+
+import com.alibaba.fastjson.JSONObject;
+
+public class CommApiUtils {
+	private static Logger logger = LoggerFactory.getLogger(CommApiUtils.class);	
+	private static String ACCESSTOKEN="accesstoken";
+	
+	private static  RedisService redisService = SpringContextHolder.getBean("redisService");
+	/** 
+	 * @Title: getAccessToken 
+	 * @Description: TODO
+	 * @param wxapp
+	 * @return
+	 * @return: AccessToken
+	 */
+	public static AccessToken getAccessToken(TWxApp wxapp) {
+		// 先从redis里取
+		AccessToken token = null;
+		Object obj = redisService.get(ACCESSTOKEN	+ wxapp.getAppid());
+		if (obj != null) {
+			token = (AccessToken) obj;
+		}		
+		if(token!=null&&token.isValid(System.currentTimeMillis())){
+			return token;
+		}else{
+			token = AccessTokenUtil.getAccessToken(wxapp);
+			if (token!=null) {
+				JedisUtils.setObject(ACCESSTOKEN	+ wxapp.getAppid(), token, 3600);
+				EhCacheUtils.put(ACCESSTOKEN	+ wxapp.getAppid(), token);
+			}
+			return token;
+		}
+	}
+	
+	/** 获取token
+	 * @Title: getToken 
+	 * @Description: TODO
+	 * @param wxapp
+	 * @return
+	 * @return: String
+	 */
+	public static String getToken(TWxApp wxapp){
+		AccessToken token = getAccessToken(wxapp);
+		if(token!=null){
+			return token.getToken();
+		}
+		return null;
+	}
+	
+	public static Oauth2AccessToken getOauth2AccessToken (TWxApp wxapp,String code){
+		return AccessTokenUtil.getOauth2AccessToken(wxapp, code);
+	}
+	
+	public static JSONObject getUserInfo(TWxApp wxapp,String code){
+		Oauth2AccessToken token = getOauth2AccessToken(wxapp, code);
+		if(token==null){
+			return null;
+		}		
+		 String userInfoUrl = Global.getConfig("user_info").replace("ACCESS_TOKEN", token.getToken()).replace("OPENID", token.getOpenid());
+		 logger.debug("userInfoUrl="+userInfoUrl);
+		 JSONObject userInfojsonObject = HttpUtils.httpsRequest(userInfoUrl, "GET",null); // 获取用户信息
+		 return userInfojsonObject;
+	}
+
+	/**
+	* Description:获取用户关注 与否信息
+	* @author zhangdehai
+	* @param wxapp
+	* @param openid
+	* @return  
+	* @date 2018年3月13日下午4:32:40
+	 */
+	public static JSONObject getSubcribeUserInfo(TWxApp wxapp,String openid){
+		AccessToken token = getAccessToken(wxapp);
+		if(token==null){
+			return null;
+		}		
+		 String userSubcribeInfoUrl = Global.getConfig("user_sucribe_info").replace("ACCESS_TOKEN", token.getToken()).replace("OPENID",openid);
+		 logger.debug("userSubcribeInfoUrl="+userSubcribeInfoUrl);
+		 JSONObject userInfojsonObject = HttpUtils.httpsRequest(userSubcribeInfoUrl, "GET",null); // 获取用户信息
+		 return userInfojsonObject;
+	}
+	
+	/** 发送客服消息
+	 * @Title: customSend 
+	 * @Description: TODO
+	 * @param openid
+	 * @param message
+	 * @param wxapp
+	 * @return
+	 * @return: JSONObject
+	 */
+	public static JSONObject customSend(String openid, String message,TWxApp wxapp){
+		String token = getToken(wxapp);
+		if(token!=null)
+			return WeixinUtil.customSend(openid, message, token);
+		return null;
+	}
+	
+	/** 根据模板发送消息
+	 * @Title: templateSend 
+	 * @Description: TODO
+	 * @param openid
+	 * @param template_id
+	 * @param miniprogram
+	 * @param data
+	 * @param wxapp
+	 * @return
+	 * @return: JSONObject
+	 */
+	public static JSONObject templateSend(String openid, String template_id, Map<String, String> miniprogram, JSONObject data,TWxApp wxapp){
+		String token = getToken(wxapp);
+		if(token!=null)
+			return WeixinUtil.templateSend(openid, template_id, miniprogram, data, token);
+		return null;
+	}
+
+
+}

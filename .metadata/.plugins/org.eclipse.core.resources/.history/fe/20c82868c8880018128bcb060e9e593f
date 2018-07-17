@@ -1,0 +1,212 @@
+package zhumeng.com.uimei.web.wx;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.github.pagehelper.PageInfo;
+
+import zhumeng.com.uimei.common.ConfigUtil;
+import zhumeng.com.uimei.model.dbo.wx.TWxImageText;
+import zhumeng.com.uimei.model.dbo.wx.TWxReply;
+import zhumeng.com.uimei.service.wx.TWxReplyService;
+import zhumeng.com.uimei.web.AppBaseController;
+
+/**
+ * @Title: WeixinReplyController.java
+ * @Package zhumeng.com.uimei.web.wx
+ * @Description: TODO(用一句话描述该文件做什么)
+ * @author z
+ * @date 2018年7月16日
+ * @version V1.0
+ */
+@Controller
+@RequestMapping(value = "${backPath}/wxReply")
+public class WeixinReplyController extends AppBaseController{
+
+	@Autowired
+	private TWxReplyService wxReplyService;
+	
+	@RequestMapping(value = {"list", ""})
+	public String list(TWxReply tWxReply, Long wxAppId,Integer pageNo,Integer pageSize, Model model) throws Exception {
+		//查询非 菜单 相关的 回复 
+		tWxReply.setMsgEvent("2");
+		tWxReply.setAppId(wxAppId);
+		PageInfo<TWxReply> page = wxReplyService.findByPage(pageNo!=null?pageNo:1,pageSize!=null?pageSize:10, tWxReply);
+		model.addAttribute("p", page);
+		model.addAttribute("wxAppId", wxAppId);
+		return "wx/wxReplyList";
+	}
+	
+
+	/**
+	 * 跳转添加页
+	 * @param tWxReply
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "beforeAddWxReply")
+	public String beforeAddWxReply(Long wxAppId,Model model) {
+		model.addAttribute("wxAppId", wxAppId);
+		return "wx/addWxReply";
+	}
+	
+	/**
+	 * 跳转编辑页
+	 * @param tWxReply
+	 * @param model
+	 * @param redirectAttributes
+	 * @return
+	 * @throws Exception 
+	 */
+	@RequestMapping(value = "beforeEditWxReply")
+	public String beforeEditWxReply(Long id,Long wxAppId,Model model) throws Exception {
+		TWxReply tWxReply = wxReplyService.findByKey(id);
+		model.addAttribute("m", tWxReply);
+		model.addAttribute("wxAppId",wxAppId);
+		return "wx/editWxReply";
+	}
+	
+	
+	/**
+	 * 保存自定义回复
+	 * @param tWxReply
+	 * @param mid 素材id
+	 * @param content 文本 内容
+	 * @param model
+	 * @param redirectAttributes
+	 * @return
+	 * @throws Exception 
+	 */
+	@RequestMapping(value = "save")
+	public String save(TWxReply tWxReply,String mid,String content,Long wxAppId, Model model, RedirectAttributes redirectAttributes) throws Exception {
+		
+		//查询关键字是否存在
+		TWxReply paramWxReply = new TWxReply();
+		paramWxReply.setAppId(wxAppId);
+		paramWxReply.setMsgEvent("2");
+		paramWxReply.setMsgKey(tWxReply.getMsgKey());
+		List<TWxReply> list = wxReplyService.findList(paramWxReply);
+		if(list!=null && list.size()>0){
+			if(tWxReply.getId()==null){
+				if(tWxReply.getMsgKey().equals(list.get(0).getMsgKey())){
+					addMessage(redirectAttributes, "保存失败，已存在关键字\""+tWxReply.getMsgKey()+"的回复\"");
+					return "redirect:"+ConfigUtil.get("backPath")+"/wxReply/beforeAddWxReply?wxAppId="+wxAppId;
+				}
+			}else{
+				if(tWxReply.getMsgKey().equals(list.get(0).getMsgKey())
+						&& list.get(0).getId().intValue()!=tWxReply.getId().intValue()){
+					addMessage(redirectAttributes, "保存失败，已存在关键字\""+tWxReply.getMsgKey()+"的回复\"");
+					return "redirect:"+ConfigUtil.get("backPath")+"/wxReply/beforeAddWxReply?wxAppId="+wxAppId;
+				}
+			}
+		}
+		tWxReply.setAppId(wxAppId);
+		if("1".equals(tWxReply.getMsgType())){
+			tWxReply.setReplyMsg(content);
+		}
+		//是图文类型的回复，则保存图文id
+		if("2".equals(tWxReply.getMsgType())){
+			tWxReply.setReplyMsg(mid);
+		}
+		wxReplyService.save(tWxReply);
+		addMessage(redirectAttributes, "保存自定义回复成功");
+		return "redirect:"+ConfigUtil.get("backPath")+"/wxReply/list?wxAppId="+wxAppId;
+	}
+
+	/**
+	 * 删除
+	 * @param tWxReply
+	 * @param redirectAttributes
+	 * @return
+	 * @throws Exception 
+	 */
+	@RequestMapping(value = "delete")
+	public String delete(Long id,Long wxAppId, RedirectAttributes redirectAttributes) throws Exception {
+		wxReplyService.delete(id);
+		addMessage(redirectAttributes, "删除自定义回复成功");
+		return "redirect:"+ConfigUtil.get("backPath")+"/wxReply/list?wxAppId="+wxAppId;
+	}
+	
+
+	/**
+	 * 跳转默认回复页
+	 * @param tWxReply
+	 * @param model
+	 * @param redirectAttributes
+	 * @return
+	 */
+	@RequestMapping(value = "defaultWxReply")
+	public String defaultWxReply(TWxReply tWxReply,Integer wxAppId,Model model, RedirectAttributes redirectAttributes) {
+		tWxReply.setMsgEvent("4");
+		tWxReply.setAppId(wxAppId);
+		List<TWxReply>  wxReplyList = wxReplyService.findList(tWxReply);
+		if(wxReplyList!=null && wxReplyList.size()>0){
+			model.addAttribute("m", wxReplyList.get(0));
+		}
+		model.addAttribute("wxAppId",wxAppId);
+		return "business/wx/defaultWxReply";
+	}
+	
+	/**
+	 * 跳转订阅回复
+	 * @param tWxReply
+	 * @param model
+	 * @param redirectAttributes
+	 * @return
+	 */
+	@RequiresPermissions("wx:wxReply:edit")
+	@RequestMapping(value = "subscribeWxReply")
+	public String subscribeWxReply(TWxReply tWxReply,Integer wxAppId,Model model, RedirectAttributes redirectAttributes) {
+		tWxReply.setMsgEvent("3");
+		tWxReply.setAppId(wxAppId);
+		List<TWxReply>  wxReplyList = wxReplyService.findList(tWxReply);
+		if(wxReplyList!=null && wxReplyList.size()>0){
+			model.addAttribute("m", wxReplyList.get(0));
+		}
+		model.addAttribute("wxAppId",wxAppId);
+		return "business/wx/subscribeWxReply";
+	}
+	
+
+	/**
+	 *  保存订阅回复或者默认回复
+	 * @param tWxReply
+	 * @param model
+	 * @param content 文本内容
+	 * @param mid 	素材id
+	 * @param redirectAttributes
+	 * @return
+	 */
+	@RequiresPermissions("wx:wxReply:edit")
+	@RequestMapping(value = "saveSubscribeOrDefaultWxReply")
+	public String saveSubscribeOrDefaultWxReply(TWxReply tWxReply,Integer wxAppId,Model model,String content,String mid,RedirectAttributes redirectAttributes) {
+		tWxReply.setAppId(wxAppId);
+		//是图文类型的回复
+		if("1".equals(tWxReply.getMsgType())){
+			tWxReply.setReplyMsg(content);
+		}
+		//是图文类型的回复，则保存图文id
+		if("2".equals(tWxReply.getMsgType())){
+			tWxReply.setReplyMsg(mid);
+		}
+		wxReplyService.save(tWxReply);
+		addMessage(redirectAttributes, "保存自定义回复成功");
+		//跳转订阅回复页面
+		if("3".equals(tWxReply.getMsgEvent())){
+			return "redirect:"+Global.getAdminPath()+"/wx/wxReply/subscribeWxReply?wxAppId="+wxAppId;
+		}
+		//跳转默认回复页面
+		if("4".equals(tWxReply.getMsgEvent())){
+			return "redirect:"+Global.getAdminPath()+"/wx/wxReply/defaultWxReply?wxAppId="+wxAppId;
+		}
+		return "redirect:"+Global.getAdminPath()+"/wx/wxReply/list?wxAppId="+wxAppId;
+	}
+}

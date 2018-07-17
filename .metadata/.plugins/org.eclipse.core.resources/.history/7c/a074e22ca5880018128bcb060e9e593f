@@ -1,0 +1,21 @@
+package zhumeng.com.uimei.dao.wx;
+
+import java.util.List;
+
+public interface TWxReplyMapper {
+    int deleteByPrimaryKey(Long id);
+
+    int insert(TWxReply record);
+
+    int insertSelective(TWxReply record);
+
+    TWxReply selectByPrimaryKey(Long id);
+
+    int updateByPrimaryKeySelective(TWxReply record);
+
+    int updateByPrimaryKeyWithBLOBs(TWxReply record);
+
+    int updateByPrimaryKey(TWxReply record);
+    
+    List<TWxReply> findForList(TWxReply record);
+}

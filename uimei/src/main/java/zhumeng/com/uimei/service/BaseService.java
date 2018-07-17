@@ -1,6 +1,7 @@
 package zhumeng.com.uimei.service;
 
 import java.util.List;
+
 import com.github.pagehelper.PageInfo;
 
 public interface BaseService<T> {
@@ -8,14 +9,14 @@ public interface BaseService<T> {
 	 * 保存
 	 * @param t
 	 */
-	public void save(T t) throws Exception;
+	public void save(T record) throws Exception;
 	
 	/**
 	 * 更新
 	 * @param t
 	 * @throws Exception
 	 */
-	public void update(T t) throws Exception;
+	public void update(T record) throws Exception;
 	
 	/**
 	 * 查找列表
@@ -23,7 +24,7 @@ public interface BaseService<T> {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<T> findList(T t) throws Exception;
+	public List<T> findList(T record) throws Exception;
 	
 	/**
 	 * 查找条数
@@ -31,7 +32,7 @@ public interface BaseService<T> {
 	 * @return
 	 * @throws Exception
 	 */
-	public Integer findCount(T t) throws Exception;
+	public Integer findCount(T record) throws Exception;
 	
 	
 	/**
@@ -54,7 +55,7 @@ public interface BaseService<T> {
 	 * @return
 	 * @throws Exception
 	 */
-	public PageInfo<T> findByPage(int pageNo, int pageSize,T t)throws Exception;
+	public PageInfo<T> findByPage(int pageNo, int pageSize,T record)throws Exception;
 
 	
 	
