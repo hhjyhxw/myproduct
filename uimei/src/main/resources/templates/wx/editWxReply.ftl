@@ -65,12 +65,12 @@ function jump(url){
 							<dt class="left co1 ddwid">自动回复内容：</dt>
 							<dd class="left mL20 ddsty">
 								<div class="ddtit">
-									<%-- <a class="html_txet" title="源代码">HTML</a><a class="phiz co5"
+									<#-- <a class="html_txet" title="源代码">HTML</a><a class="phiz co5"
 										href="javascript:void(0);"> <img
-										src="${ctxStatic}/modules/business/wx/images/img1.jpg" />表情</a><a
+										src=""${basePath}/wx/images/img1.jpg" />表情</a><a
 										onclick="linkText();" class="link co5"
 										href="javascript:void(0);"> <img
-										src="${ctxStatic}/modules/business/wx/images/img3.jpg" />超链接</a> --%>
+										src="${basePath}/wx/images/img3.jpg" />超链接</a> -->
 								</div>
 
 								<div class="ddcont editArea">
@@ -78,7 +78,8 @@ function jump(url){
 										class="display_none"
 										style="border-radius: 2px; width: 498px; height: 80px">${(m.replyMsg)!}</textarea>
 									<div class="textarea" contenteditable="true">
-										<img src="56.gif" alt="mo-西瓜">
+										<!-- <img src="56.gif" alt="mo-西瓜"> -->
+										${(m.replyMsg)!}
 									</div>
 								</div>
 							</dd>
@@ -118,9 +119,9 @@ function jump(url){
 			</div>
 			<div class="dlsty bgco6">
 				<input type="submit" name="ctl00$cph$btnUpd" value="保存"
-					onclick="return GetBtn();" id="cph_btnUpd" class="greenbtn100" />
+					onclick="return GetBtn();" id="cph_btnUpd" class="greenbtn100" style="background:#0088cc;border: 1px solid #0088cc;"/>
 					<input type="button" name="ctl00$cph$btnUpd" value="返回"
-					onclick="backto_();" class="greenbtn100" />
+					onclick="backto_();" class="greenbtn100" style="background:#0088cc;border: 1px solid #0088cc;"/>
 			</div>
 		</div>
 
@@ -143,10 +144,9 @@ function jump(url){
             } else if (n == "2") {//图文
                 $("#multiArticle").show();
                  var r = /^\+?[1-9][0-9]*$/;
-                if(r.test('${m.replyMsg}')){
-                	 GetBindDataShow('${m.replyMsg}');
+                if(r.test('${(m.replyMsg)!}')){
+                	 GetBindDataShow('${(m.replyMsg)!}');
                 }
-                //GetBindDataShow('${m.replyMsg}');
             } else if (n == "service") {
                 $("#duokefu").show();
             }else if(n=="business"){
@@ -347,7 +347,7 @@ function jump(url){
                         if (this.img_num > 1) {
                             ss_imagetext = "more-imagetext";
                         }
-                        $(".allArticles").append("<li class='" + ss_imagetext + "' title='" + decodeURIComponent(this.title) + "'><img src='" +"${ctxRoot}" + this.picUrl + "' /><div class='testradio'><input id='" + this.id + "' name='id' value='" + this.id + "' type='radio'><label for='" + this.id + "'>" + decodeURIComponent(this.title).substring(0, 10) + "</label></div></li>");
+                        $(".allArticles").append("<li class='" + ss_imagetext + "' title='" + decodeURIComponent(this.title) + "'><img src='" +"${basePath}" + this.picUrl + "' /><div class='testradio'><input id='" + this.id + "' name='id' value='" + this.id + "' type='radio'><label for='" + this.id + "'>" + decodeURIComponent(this.title).substring(0, 10) + "</label></div></li>");
                     });
 
                    //分页
@@ -448,28 +448,6 @@ function jump(url){
 
 
 //============业务模块开始==========
-$("#BusinessShow").click(function(){
-
- $.ajax({ type: "POST",
-                url: "${pageContext.request.contextPath}/response/getUserBusinessModel.action",
-               
-                timeout: "10000",
-                dataType: "text",
-                error: function () {
-                    $("#_business .msg-item").html("<li>服务器繁忙，请稍后重试</li>");
-                },
-                success: function (dt) {
-                
-                var map = eval('(' + dt + ')');
-                var strHtml = "<select name='bid' ><option value='0' selected='selected'>请选择</option>";
-                for(var key in map){
-                 strHtml += "<option value='"+key+">'"+map[key]+"</option>"
-                }
-                strHtml += "</select>";
-                               $("#_business .ddcont").html(strHtml);
-}});
-
-});
     </script>
 
 

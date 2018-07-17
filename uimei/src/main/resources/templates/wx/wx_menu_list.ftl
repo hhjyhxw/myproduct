@@ -419,6 +419,7 @@
         var $contentDiv = $(".editArea div");
         var $answertype = $("#cph_ddlreply_form");
         var $NewsId = $("#cph_hfNewsId");
+        debugger;
 
         //回复类型切换界面
         function GetType(n) {

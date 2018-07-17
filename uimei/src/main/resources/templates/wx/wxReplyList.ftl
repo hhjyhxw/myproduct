@@ -64,7 +64,7 @@ function jump(url){
 						<#if m.msgType=='2'>图文</#if>
 						</td>
 						<td>
-						 [<a href="${basePath}/${backPath}/wxReply/beforeEditWxReply?id=${m.id }">设置</a>] [<a  id="cph_RepeaterList_lbtnDel_2" title="删除" class="Del" href="javascript:delByid('${m.id }')">删除</a>]
+						 [<a href="${basePath}/${backPath}/wxReply/beforeEditWxReply?id=${m.id }&wxAppId=${wxAppId}">编辑</a>] [<a  id="cph_RepeaterList_lbtnDel_2" title="删除" class="Del" href="javascript:delByid('${m.id }')">删除</a>]
 						
 						</td>
 					</tr>
@@ -73,9 +73,9 @@ function jump(url){
                 <tfoot>
                     <tr>
                         <td colspan="3" class="r">
-                        	<input type="button" name="ctl00$cph$btnAdd" value="默认回复" onclick="addDefault();" id="cph_btnAdd" class="greenbtn50 mR20" style="width:65px;"/>
-                            <input type="button" name="ctl00$cph$btnAdd" value="订阅回复" onclick="addSubscribe();" id="cph_btnAdd" class="greenbtn50 mR20" style="width:65px;"/>
-                            <input type="button" name="ctl00$cph$btnAdd" value="新增" onclick="addNews();" id="cph_btnAdd" class="greenbtn50 mR20" />
+                        	<input type="button" name="ctl00$cph$btnAdd" value="默认回复" onclick="addDefault();" id="cph_btnAdd" class="greenbtn50 mR20" style="width:65px;background:#0088cc;border: 1px solid #0088cc;" />
+                            <input type="button" name="ctl00$cph$btnAdd" value="订阅回复" onclick="addSubscribe();" id="cph_btnAdd" class="greenbtn50 mR20" style="width:65px;background:#0088cc;border: 1px solid #0088cc;"/>
+                            <input type="button" name="ctl00$cph$btnAdd" value="新增" onclick="addNews();" id="cph_btnAdd" class="greenbtn50 mR20" style="background:#0088cc;border: 1px solid #0088cc;"/>
                         </td>
                     </tr>
                 </tfoot>

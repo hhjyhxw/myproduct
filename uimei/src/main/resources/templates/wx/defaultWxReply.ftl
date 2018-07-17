@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
@@ -29,7 +29,7 @@ function jump(url){
 	<form
 		action="${basePath}/${backPath}/wxReply/saveSubscribeOrDefaultWxReply"
 		method="post" name="form1">
-<input name="id" value="${m.id }" type="hidden"/>
+<input name="id" value="${(m.id)!}" type="hidden"/>
 <!-- 默认回复  -->
 <input name="msgEvent" value="4" type="hidden"/>
 <input type="hidden" value="${(wxAppId)!}" id="wxAppId"  name="wxAppId"/>
@@ -42,14 +42,14 @@ function jump(url){
 			<div class="clear"></div>
 			<div class="reply top size">
 				<div class="hig">
-					<%-- <dl>
+					<#-- <dl>
 						<dt class="left co1 ddwid">关键字：</dt>
 						<dd class="left mL20">
 							<input name="msgKey" type="text" maxlength="20" id="cph_txtKey" value="${(m.msgKey)!}"
 								class="input200" /> <span class="co4">*必填</span> <span
 								class="co2">不可重复，不允许纯数字。</span>
 						</dd>
-					</dl> --%>
+					</dl> -->
 					<div class="clearh"></div>
 					<dl>
 						<dt class="left co1 ddwid">回复类型：</dt>
@@ -66,12 +66,12 @@ function jump(url){
 							<dt class="left co1 ddwid">自动回复内容：</dt>
 							<dd class="left mL20 ddsty">
 								<div class="ddtit">
-									<%-- <a class="html_txet" title="源代码">HTML</a><a class="phiz co5"
+									<#-- <a class="html_txet" title="源代码">HTML</a><a class="phiz co5"
 										href="javascript:void(0);"> <img
 										src="${basePath}/wx/images/img1.jpg" />表情</a><a
 										onclick="linkText();" class="link co5"
 										href="javascript:void(0);"> <img
-										src="${basePath}/wx/images/img3.jpg" />超链接</a> --%>
+										src="${basePath}/wx/images/img3.jpg" />超链接</a> -->
 								</div>
 								
 
@@ -120,9 +120,9 @@ function jump(url){
 			</div>
 			<div class="dlsty bgco6">
 				<input type="submit" name="ctl00$cph$btnUpd" value="保存"
-					onclick="" id="cph_btnUpd" class="greenbtn100" />
+					onclick="" id="cph_btnUpd" class="greenbtn100" style="background:#0088cc;border: 1px solid #0088cc;" />
 					<input type="button" name="ctl00$cph$btnUpd" value="返回"
-					onclick="backto_();" class="greenbtn100" />
+					onclick="backto_();" class="greenbtn100" style="background:#0088cc;border: 1px solid #0088cc;" />
 			</div>
 		</div>
 
@@ -145,10 +145,10 @@ function jump(url){
             } else if (n == "2") {//图文
                 $("#multiArticle").show();
                  var r = /^\+?[1-9][0-9]*$/;
-                if(r.test('${m.replyMsg}')){
-                	 GetBindDataShow('${m.replyMsg}');
+                if(r.test('${(m.replyMsg)!}')){
+                	 GetBindDataShow('${(m.replyMsg)!}');
                 }
-                //GetBindDataShow('${m.replyMsg}');
+                
             } else if (n == "service") {
                 $("#duokefu").show();
             }else if(n=="business"){
@@ -349,7 +349,7 @@ function jump(url){
                         if (this.img_num > 1) {
                             ss_imagetext = "more-imagetext";
                         }
-                        $(".allArticles").append("<li class='" + ss_imagetext + "' title='" + decodeURIComponent(this.title) + "'><img src='" +"${ctxRoot}" + this.picUrl + "' /><div class='testradio'><input id='" + this.id + "' name='id' value='" + this.id + "' type='radio'><label for='" + this.id + "'>" + decodeURIComponent(this.title).substring(0, 10) + "</label></div></li>");
+                        $(".allArticles").append("<li class='" + ss_imagetext + "' title='" + decodeURIComponent(this.title) + "'><img src='" +"${basePath}" + this.picUrl + "' /><div class='testradio'><input id='" + this.id + "' name='id' value='" + this.id + "' type='radio'><label for='" + this.id + "'>" + decodeURIComponent(this.title).substring(0, 10) + "</label></div></li>");
                     });
 
                    //分页

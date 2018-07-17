@@ -29,7 +29,11 @@ public class TWxReplyServiceImpl implements  TWxReplyService{
 	private TWxReplyMapper wxReplyMapper;
 	@Override
 	public void save(TWxReply record) throws Exception {
-		wxReplyMapper.insert(record);
+		if(record.getId()!=null){
+			wxReplyMapper.updateByPrimaryKeySelective(record);
+		}else{
+			wxReplyMapper.insert(record);
+		}
 	}
 
 	

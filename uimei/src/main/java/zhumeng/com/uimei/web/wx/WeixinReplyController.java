@@ -149,7 +149,7 @@ public class WeixinReplyController extends AppBaseController{
 			model.addAttribute("m", wxReplyList.get(0));
 		}
 		model.addAttribute("wxAppId",wxAppId);
-		return "business/wx/defaultWxReply";
+		return "wx/defaultWxReply";
 	}
 	
 	/**
@@ -169,7 +169,7 @@ public class WeixinReplyController extends AppBaseController{
 			model.addAttribute("m", wxReplyList.get(0));
 		}
 		model.addAttribute("wxAppId",wxAppId);
-		return "business/wx/subscribeWxReply";
+		return "wx/subscribeWxReply";
 	}
 	
 

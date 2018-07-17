@@ -65,12 +65,12 @@ function jump(url){
 							<dt class="left co1 ddwid">自动回复内容：</dt>
 							<dd class="left mL20 ddsty">
 								<div class="ddtit">
-									<%-- <a class="html_txet" title="源代码">HTML</a><a class="phiz co5"
+									<#-- <a class="html_txet" title="源代码">HTML</a><a class="phiz co5"
 										href="javascript:void(0);"> <img
 										src="${basePath}/wx/images/img1.jpg" />表情</a><a
 										onclick="linkText();" class="link co5"
 										href="javascript:void(0);"> <img
-										src="${basePath}/wx/images/img3.jpg" />超链接</a> --%>
+										src="${basePath}/wx/images/img3.jpg" />超链接</a> -->
 								</div>
 								
 
@@ -79,7 +79,7 @@ function jump(url){
 										class="display_none"
 										style="border-radius: 2px; width: 498px; height: 80px"></textarea>
 									<div class="textarea" contenteditable="true">
-										<img src="${basePath}/wx/images/56.gif" alt="mo-西瓜">
+										<%-- <img src="${basePath}/wx/images/56.gif" alt="mo-西瓜"> --%>
 									</div>
 								</div>
 							</dd>
@@ -115,9 +115,9 @@ function jump(url){
 			</div>
 			<div class="dlsty bgco6">
 				<input type="submit" name="ctl00$cph$btnUpd" value="保存"
-					onclick="return GetBtn();" id="cph_btnUpd" class="greenbtn100" />
+					onclick="return GetBtn();" id="cph_btnUpd" class="greenbtn100"  style="background:#0088cc;border: 1px solid #0088cc;"/>
 					<input type="button" name="ctl00$cph$btnUpd" value="返回"
-					onclick="backto_();" class="greenbtn100" />
+					onclick="backto_();" class="greenbtn100"  style="background:#0088cc;border: 1px solid #0088cc;"/>
 			</div>
 		</div>
 
@@ -339,7 +339,7 @@ function jump(url){
                         if (this.img_num > 1) {
                             ss_imagetext = "more-imagetext";
                         }
-                        $(".allArticles").append("<li class='" + ss_imagetext + "' title='" + decodeURIComponent(this.title) + "'><img src='" +"${ctxRoot}" + this.picUrl + "' /><div class='testradio'><input id='" + this.id + "' name='id' value='" + this.id + "' type='radio'><label for='" + this.id + "'>" + decodeURIComponent(this.title).substring(0, 10) + "</label></div></li>");
+                        $(".allArticles").append("<li class='" + ss_imagetext + "' title='" + decodeURIComponent(this.title) + "'><img src='" +"${basePath}" + this.picUrl + "' /><div class='testradio'><input id='" + this.id + "' name='id' value='" + this.id + "' type='radio'><label for='" + this.id + "'>" + decodeURIComponent(this.title).substring(0, 10) + "</label></div></li>");
                     });
 
                    //分页

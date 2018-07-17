@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<title>修改自定义回复关键字</title>
+	<script src="${basePath}/wx/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<link href="${basePath}/wx/css/sub_style.css" rel="stylesheet" type="text/css" />
+	<link href="${basePath}/wx/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="${basePath}/wx/css/demo.css?i=013" type="text/css"/>
+	<link rel="stylesheet" href="${basePath}/wx/css/zTreeStyle/zTreeStyle.css" type="text/css"/>
+	<script src="${basePath}/wx/js/jquery-ui.js" type="text/javascript"></script>
+	<script src="${basePath}/wx/js/emotion.js" type="text/javascript"></script>
+	<script type="text/javascript" src="${basePath}/wx/js/jquery.ztree.core-3.5.js"></script>
+<script type="text/javascript">
+function jump(url){
+		var e = document.createElement("a");
+		e.href = url;
+		document.body.appendChild(e);
+		e.click();
+	}
+	function backto_(){
+	 	jump("${basePath}/${backPath}/wxReply/list?wxAppId="+document.getElementById("wxAppId").value);
+	 }
+
+</script>
+</head>
+<body>
+	${(message)!}
+	<form
+		action="${basePath}/${backPath}/wxReply/save"
+		method="post" name="form1">
+<input name="id" value="${(m.id)!}" type="hidden"/>
+<input name="msgEvent" value="2" type="hidden"/>
+<input type="hidden" value="${(wxAppId)!}" id="wxAppId"  name="wxAppId"/>
+		<div id="submain"
+			style="height: 493px; width: 909px;margin-top: 20px;">
+			<div class="hig border">
+				<h1 class="tit2 co1 left">关键字自动应答</h1>
+			</div>
+			
+			<div class="clear"></div>
+			<div class="reply top size">
+				<div class="hig">
+					<dl>
+						<dt class="left co1 ddwid">关键字：</dt>
+						<dd class="left mL20">
+							<input name="msgKey" type="text" maxlength="20" id="cph_txtKey" value="${(m.msgKey)!}"
+								class="input200" /> <span class="co4">*必填</span> <span
+								class="co2">不可重复，不允许纯数字。</span>
+						</dd>
+					</dl>
+					<div class="clearh"></div>
+					<dl>
+						<dt class="left co1 ddwid">回复类型：</dt>
+						<dd class="left mL20">
+							<select name="msgType" id="cph_ddlreply_form">
+								<option value="1" <#if (m?? && m.msgType=='1')>selected="selected" </#if>>文本</option>
+								<option value="2" <#if (m?? && m.msgType=='2')>selected="selected" </#if>>图文</option>
+							</select>
+						</dd>
+					</dl>
+					<div class="clearh"></div>
+					<div id="textreply" class="display_none" style="display: block;">
+						<dl>
+							<dt class="left co1 ddwid">自动回复内容：</dt>
+							<dd class="left mL20 ddsty">
+								<div class="ddtit">
+									<#-- <a class="html_txet" title="源代码">HTML</a><a class="phiz co5"
+										href="javascript:void(0);"> <img
+										src=""${basePath}/wx/images/img1.jpg" />表情</a><a
+										onclick="linkText();" class="link co5"
+										href="javascript:void(0);"> <img
+										src="${basePath}/wx/images/img3.jpg" />超链接</a> -->
+								</div>
+
+								<div class="ddcont editArea">
+									<textarea name="content" rows="2" cols="20" id="cph_txtwelcome" value=""
+										class="display_none"
+										style="border-radius: 2px; width: 498px; height: 80px">${(m.replyMsg)!}</textarea>
+									<div class="textarea" contenteditable="true">
+										<!-- <img src="56.gif" alt="mo-西瓜"> -->
+										${(m.replyMsg)!}
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<div class="clearh"></div>
+						<dl>
+							<dt class="left co1 ddwid">&nbsp;</dt>
+							<dd class="left mL20">
+								<font class="co6"><em class="co4 ml20 pdr10 pdl100">*</em>必填</font>
+							</dd>
+						</dl>
+					</div>
+					
+					<div id="multiArticle" class="display_none " style="display: none;">
+						<dl>
+							<dt class="left co1 ddwid">自动回复图文：</dt>
+							<dd class="left mL20 ddsty co1">
+								<div class="ddtit">
+									<input value="选择图文" id="ArticleShow" class="inputbgr3"
+										type="button" onclick="return ArticleShow_onclick()" />
+								</div>
+								<div class="ddcont">
+									<div class="msg-item">
+									  
+									
+									
+									</div>
+									<input id="cph_hfNewsId" value="" name="mid" type="hidden" />
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+					<div id="duokefu" class="display_none co2" style="display: none;">使用多客服系统，需要微信公众开通高级接口，并下载多客服客户端程序</div>
+				</div>
+				<div class="clearh"></div>
+			</div>
+			<div class="dlsty bgco6">
+				<input type="submit" name="ctl00$cph$btnUpd" value="保存"
+					onclick="return GetBtn();" id="cph_btnUpd" class="greenbtn100" />
+					<input type="button" name="ctl00$cph$btnUpd" value="返回"
+					onclick="backto_();" class="greenbtn100" />
+			</div>
+		</div>
+
+		<script type="text/javascript">
+        var $textarea = $(".editArea textarea");
+        var $contentDiv = $(".editArea div");
+        var $answertype = $("#cph_ddlreply_form");
+        var $NewsId = $("#cph_hfNewsId");
+
+        //回复类型切换界面
+        function GetType(n) {
+            $("#textreply").hide();
+            $("#multiArticle").hide();
+            $("#duokefu").hide();
+            $("#_business").hide();
+            if (n == "mainMenu") {
+                //$("#mpmenu").show();
+            } else if (n == "1") {//文本
+                $("#textreply").show();
+            } else if (n == "2") {//图文
+                $("#multiArticle").show();
+                 var r = /^\+?[1-9][0-9]*$/;
+                if(r.test('${m.replyMsg}')){
+                	 GetBindDataShow('${m.replyMsg}');
+                }
+                //GetBindDataShow('${m.replyMsg}');
+            } else if (n == "service") {
+                $("#duokefu").show();
+            }else if(n=="business"){
+            $("#_business").show();
+            }
+        }
+
+//提交数据时
+        function GetBtn() {
+            if ($("#cph_txtKey").val() == "") {
+                alert("关键字不能为空！");
+                $("#cph_txtKey").focus();
+                return false;
+            }
+            else if (parseInt($("#cph_txtKey").val()) == $("#cph_txtKey").val()) {
+                alert("关键字不能为纯数字！");
+                $("#cph_txtKey").focus();
+                return false;
+            }
+            return true;
+        }
+
+        $(function () {
+
+            $textarea.change(function () {
+                $contentDiv.html(Emotion.replaceEmoji($(this).val()));
+                $(this).height($contentDiv.height());
+            })
+
+            $(".html_txet").click(function () {
+                $(this).toggleClass("html_txet_co");
+                $textarea.toggle();
+                $contentDiv.toggle();
+                $textarea.height($contentDiv.height());
+                $('.phiz').toggle();
+                $('.link').toggle();
+            })
+
+            if ($NewsId.val() != "0" && $answertype.val() == "news") {
+                GetBindDataShow($NewsId.val());
+            }
+
+            $contentDiv.html(Emotion.replaceEmoji($textarea.val()));
+            GetType($answertype.val());
+
+            $("#cph_ddlreply_form").change(function () {
+                GetType($(this).val());
+            });
+
+            //===========表情============
+            $(".ddtit .phiz").click(function () {
+                $(".emotions").show();
+            });
+            $(".emotions").hover(function () {
+
+            }, function () {
+                $(".emotions").fadeOut();
+            });
+            $(".emotions .eItem").mouseenter(function () {
+                $(".emotionsGif").html('<img src="' + $(this).attr("data-gifurl") + '">');
+            }).click(function () {
+                Emotion.insertHTML('<img src="' + $(this).attr("data-gifurl") + '"' + 'alt="mo-' + $(this).attr("data-title") + '"' + "/>");
+                $(".emotions").fadeOut();
+                $textarea.trigger("contentValueChange");
+
+            });
+            $contentDiv.bind("keyup", function () {
+                $textarea.trigger("contentValueChange");
+                Emotion.saveRange();
+            }).bind("keydown", function (e) {
+                switch (e.keyCode) {
+                    case 8:
+                        var t = Emotion.getSelection();
+                        t.type && t.type.toLowerCase() === "control" && (e.preventDefault(), t.clear());
+                        break;
+                    case 13:
+                        e.preventDefault(),
+                Emotion.insertHTML("<br/>");
+                        Emotion.saveRange();
+                }
+            }).bind("mouseup", function (e) {
+                Emotion.saveRange();
+                if ($.browser.msie && />$/.test($contentDiv.html())) {
+                    var n = Emotion.getSelection();
+                    n.extend && (n.extend(cursorNode, cursorNode.length), n.collapseToEnd()),
+                Emotion.saveRange();
+                    Emotion.insertHTML(" ");
+                }
+            });
+            $textarea.bind("contentValueChange", function () {
+                $(this).val(Emotion.replaceInput($contentDiv.html()));
+            });
+            $contentDiv.html(Emotion.replaceEmoji($contentDiv.html()));
+            //===========end表情============
+
+
+            //=============超链接============
+            
+           
+             $(".ddtit .link").click(function () { 
+
+               var _con = Emotion.getSelectionContents(); 
+               var _url = "http://";
+               var pattern = /<a.*?href=["]{0,1}([^"\s]*).*?>/ig;
+               var mts = pattern.exec(_con);
+                if (mts != null) {
+                    _url = mts[1];
+                }  
+
+                $("#txtUrl").val(_url);
+              
+                $("#txtCon").html(_con.replace(/<br.*?>/ig, " ").replace(/<a.*?>/ig, "").replace(/<\/a>/ig, "")); 
+                $("#hyperlink").dialog("open");
+
+            });
+            $("#hyperlink").dialog({
+                autoOpen: false,
+                resizable: false,
+                modal: false,
+                width: 470,
+                height: 300,
+                buttons: {
+                    "确定": function () {
+                        var strCon = $("#txtCon").html();
+                        var strUrl = $("#txtUrl").val();
+                        var strHtml = strCon;
+                        if (strUrl != "" && strUrl != "http://") {
+                            if (strCon == "") {
+                                strCon = strUrl;
+                            }
+                            strHtml = '<a href="' + strUrl + '">' + strCon + '</a>';
+                        }
+                        Emotion.insertHTML(strHtml);
+                        $textarea.trigger("contentValueChange");
+                        $(this).dialog("close");
+                    },
+                    "取消": function () { $(this).dialog("close"); }
+                }
+            });
+           
+            //===========超链接============
+
+
+            //===========图文列表============  
+
+
+            $("#ArticleShow").click(function () {
+                $("#ArticleListShow").dialog("open");
+                $(".allArticles").html("<li>数据加载中。。。</li>");
+                GetBindData(1);
+            });
+
+            $("#ArticleListShow").dialog({
+                autoOpen: false,
+                resizable: false,
+                resizable: true,
+                modal: true,
+                minWidth: 480,
+                minHeight: 380,
+                width: 550,
+                height: 400,
+                buttons: {
+                    "确定": function () {
+                   
+                        if ($(':radio[name="id"]:checked').length > 0) {
+                            var id = ($(':radio[name="id"]:checked').val());
+                           
+                            GetBindDataShow(id);
+                        }
+                        $(this).dialog("close");
+                    },
+                    "取消": function () { $(this).dialog("close"); }
+                }
+            });
+            //===========end图文列表============
+        });
+
+
+        //===========读取图文列表============
+        function GetBindData(PageIndex) {
+            $.ajax({
+                type: "POST",
+                url: "${basePath}/${backPath}/wxImageText/getwxImageTextListForMenu",
+                data: { "model": "list", "PageSize": "30", "PageIndex": PageIndex,"wxAppId":"${wxAppId}"},
+                timeout: "10000",
+                dataType: "text",
+                error: function () {
+                    $(".allArticles").html("<li>服务器繁忙，请稍后重试</li>");
+                },
+                success: function (dt) {
+                
+                var d = eval('(' + dt + ')');
+               
+                    $(".allArticles").html("");
+                    $("#PageInfo").html("(当前第" + d.p.pageNo + "/" + d.p.last + "页 共" + d.p.count + "条记录)");
+                    $(d.data).each(function () {
+                        var ss_imagetext = "only-imagetext";
+                        if (this.img_num > 1) {
+                            ss_imagetext = "more-imagetext";
+                        }
+                        $(".allArticles").append("<li class='" + ss_imagetext + "' title='" + decodeURIComponent(this.title) + "'><img src='" +"${basePath}" + this.picUrl + "' /><div class='testradio'><input id='" + this.id + "' name='id' value='" + this.id + "' type='radio'><label for='" + this.id + "'>" + decodeURIComponent(this.title).substring(0, 10) + "</label></div></li>");
+                    });
+
+                   //分页
+                    $(".page").html("");
+                    if (d.p.pageNo - 1 > 0) {
+                        $(".page").append("<a href='javascript:GetBindData(" + (d.p.pageNo - 1) + ");'>上一页</a>");
+                    }
+                    else {
+                        $(".page").append("<a>上一页</a>");
+                    }
+                    for (i = 1; i <= d.p.totalPage; i++) {
+
+                        if (i == d.p.currPage) {
+                            $(".page").append("<a class='hover'>" + i + "</a>");
+                        } else {
+                            $(".page").append("<a href='javascript:GetBindData(" + i + ");'>" + i + "</a>");
+                        }
+                    }
+                    if (d.p.pageNo < d.p.last) {
+                        $(".page").append("<a href='javascript:GetBindData(" + (d.p.pageNo + 1) + ");'>下一页</a>");
+                    }
+                    else {
+                        $(".page").append("<a >下一页</a>");
+
+                    }
+
+                }
+            });
+        }
+        //===========end读取图文列表============
+
+
+
+        //===========读取图文详情============
+       function GetBindDataShow(id) {
+       
+            $.ajax({
+                type: "POST",
+                url: "${basePath}/${backPath}/wxImageText/getwxImageTextListForMenu",
+                data: { "model": "show", "id": id,"wxAppId":"${wxAppId}"},
+                timeout: "10000",
+                dataType: "text",
+                error: function () {
+                    alert("服务器繁忙，请稍后重试");
+                },
+                success: function (data) {
+                 var data = eval('(' + data + ')');
+                    var strHtml = "";
+                    strHtml += "<div id='appmsgItem1' class='appmsgItem'>";
+                    strHtml += "    <p class='multi-msg'>";
+                    strHtml += "        <span class='msg-date'>" + "</span>";
+                    strHtml += "    </p>";
+                    strHtml += "    <div class='cover'>";
+                    strHtml += "        <h4 class='msg-t'>";
+                    strHtml += "            <a href='" + data.vistedUrl + "' class='i-title' target='_blank'>" + decodeURIComponent(data.title) + "</a>";
+                    strHtml += "        </h4>";
+                    strHtml += "        <img src='" +"${basePath}" + data.picUrl + "' class='i-img'>";
+                    strHtml += "    </div>";
+                    strHtml += "</div>";
+
+                   strHtml += "<div class='msg-text' >" + decodeURIComponent(data.description) + "</div>";
+                   /*  if (data.img_num == 1) {
+                        strHtml += "<div class='msg-text' >" + decodeURIComponent(data.description) + "</div>";
+                    }
+                    else {
+                        strHtml += GetItemHtml(2, data.img_2, data.url_2, data.title_2);
+                        strHtml += GetItemHtml(3, data.img_3, data.url_3, data.title_3);
+                        strHtml += GetItemHtml(4, data.img_4, data.url_4, data.title_4);
+                        strHtml += GetItemHtml(5, data.img_5, data.url_5, data.title_5);
+                        strHtml += GetItemHtml(6, data.img_6, data.url_6, data.title_6);
+                        strHtml += GetItemHtml(7, data.img_7, data.url_7, data.title_7);
+                        strHtml += GetItemHtml(8, data.img_8, data.url_8, data.title_8);
+                    } */
+                    $("#multiArticle .msg-item").html(strHtml);
+                    $("#cph_hfNewsId").val(id);
+                }
+            });
+        }
+
+        function GetItemHtml(n, img, url, title) {
+            var strHtml = "";
+            if (title != "") {
+                strHtml += "<div class='rel sub-msg-item appmsgItem'>";
+                strHtml += "    <div class='thumb'>";
+                strHtml += "        <img src='" + img + "' class='i-img'>";
+                strHtml += "    </div>";
+                strHtml += "    <h4 class='msg-t'>";
+                strHtml += "        <a href='" + url + "' target='_blank' class='i-title'>" + decodeURIComponent(title) + "</a>";
+                strHtml += "    </h4>";
+                strHtml += "</div>";
+            }
+            return strHtml;
+        }
+        //===========end图文详情============
+        function ArticleShow_onclick() {
+
+        }
+
+
+//============业务模块开始==========
+$("#BusinessShow").click(function(){
+
+ $.ajax({ type: "POST",
+                url: "${pageContext.request.contextPath}/response/getUserBusinessModel.action",
+               
+                timeout: "10000",
+                dataType: "text",
+                error: function () {
+                    $("#_business .msg-item").html("<li>服务器繁忙，请稍后重试</li>");
+                },
+                success: function (dt) {
+                
+                var map = eval('(' + dt + ')');
+                var strHtml = "<select name='bid' ><option value='0' selected='selected'>请选择</option>";
+                for(var key in map){
+                 strHtml += "<option value='"+key+">'"+map[key]+"</option>"
+                }
+                strHtml += "</select>";
+                               $("#_business .ddcont").html(strHtml);
+}});
+
+});
+    </script>
+
+
+
+		<div id="message-reshow" style="display: none;">信息</div>
+		<script type="text/javascript">
+        function Message_show() { $(".message-tip").slideDown("slow"); $("#message-reshow").hide(); }
+        function Message_hide() { $(".message-tip").slideUp("slow"); $("#message-reshow").show(); }
+        $(function () {
+            //            Message_hide();
+            //            $("#close").click(function () {
+            //                Message_hide();
+            //            })
+            //            $("#message-reshow").click(function () {
+            //                Message_show();
+            //            })
+        })
+    </script>
+</form>
+	<div
+		class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable"
+		tabindex="-1" role="dialog" aria-describedby="hyperlink"
+		aria-labelledby="ui-id-1" style="display: none;">
+		<div
+			class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+			<span id="ui-id-1" class="ui-dialog-title">插入超链接</span>
+			<button
+				class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"
+				role="button" aria-disabled="false" title="close">
+				<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span
+					class="ui-button-text">close</span>
+			</button>
+		</div>
+		<div id="hyperlink"
+			class="display_none ui-dialog-content ui-widget-content"
+			style="display: block;">
+			<div class="top">
+				<p>文本内容：</p>
+				<div contenteditable="true" id="txtCon" class="Link_Con"></div>
+			</div>
+			<div class="top">
+				<p>链接地址：</p>
+				<input id="txtUrl" type="text" class="input400" value="" />
+			</div>
+		</div>
+		<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+			<div class="ui-dialog-buttonset">
+				<button type="button"
+					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					role="button" aria-disabled="false">
+					<span class="ui-button-text">确定</span>
+				</button>
+				<button type="button"
+					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					role="button" aria-disabled="false">
+					<span class="ui-button-text">取消</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div
+		class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable"
+		tabindex="-1" role="dialog" aria-describedby="ArticleListShow"
+		aria-labelledby="ui-id-2" style="display: none; position: absolute;">
+		<div
+			class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+			<span id="ui-id-2" class="ui-dialog-title">选择图文消息</span>
+			<button
+				class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close"
+				role="button" aria-disabled="false" title="close">
+				<span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span
+					class="ui-button-text">close</span>
+			</button>
+		</div>
+		<div id="ArticleListShow"
+			class="display_none ui-dialog-content ui-widget-content"
+			style="display: block;">
+			<h3 class="page-sub-hd">
+				图文列表<span id="PageInfo"></span>
+			</h3>
+			<div class="page top"></div>
+			<ul class="allArticles">
+			</ul>
+		</div>
+		<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+			<div class="ui-dialog-buttonset">
+				<button type="button"
+					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					role="button" aria-disabled="false">
+					<span class="ui-button-text">确定</span>
+				</button>
+				<button type="button"
+					class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					role="button" aria-disabled="false">
+					<span class="ui-button-text">取消</span>
+				</button>
+			</div>
+		</div>
+		<div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+		<div
+			class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+			style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+		<div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
+	</div>
+</body>
+</html>
+

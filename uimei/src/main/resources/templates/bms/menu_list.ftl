@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>菜单</title>
-		<link rel="stylesheet" href="${basePath}/plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="${basePath}/css/global.css" media="all">
-		<link rel="stylesheet" href="${basePath}/plugins/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="${basePath}/css/table.css" />
+		<link rel="stylesheet" href="${request.contextPath}/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="${request.contextPath}/css/global.css" media="all">
+		<link rel="stylesheet" href="${request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="${request.contextPath}/css/table.css" />
 	</head>
 
 	<body>
@@ -17,7 +17,7 @@
 		       <a href="javascript:;" class="layui-btn layui-btn-small" id="search">
 					<i class="layui-icon">&#xe615;</i> 搜索
 				</a>
-				 <a href="${request.contextPath}${backPath}/admin/menu_to_input" class="layui-btn layui-btn-small" >
+				 <a href="${request.contextPath}/backpage/admin/menu_to_input" class="layui-btn layui-btn-small" >
 					<i class="layui-icon">&#xe61f;</i> 添加 
 				</a>
 			</blockquote>
@@ -48,7 +48,7 @@
 								
 								</td>
 								<td>
-									<a href="${basePath}${backPath}/admin/menu_to_input?id=${m.id}"  class="layui-btn layui-btn-mini">编辑</a>
+									<a href="${request.contextPath}/backpage/admin/menu_to_input?id=${m.id}"  class="layui-btn layui-btn-mini">编辑</a>
 									<a href="javascript:del('${m.id}');" data-id="1" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini" >删除</a>
 								</td>
 							</tr>
@@ -65,11 +65,11 @@
 				</div>
 			</div>
 		</div>
-        <script type="text/javascript" src="${basePath}/plugins/layui/layui.js"></script>
-		<script type="text/javascript" src="${basePath}/js/jquery.min.js"></script>
+        <script type="text/javascript" src="${request.contextPath}/plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="${request.contextPath}/js/jquery.min.js"></script>
 		<script>
 			layui.config({
-				base: '${basePath}/plugins/layui/modules/'
+				base: '${request.contextPath}/plugins/layui/modules/'
 			});
 
 			layui.use(['icheck', 'laypage','layer'], function() {
@@ -94,7 +94,7 @@
 						var curr = obj.curr;
 						if(!first) {
 						 $.ajax({
-				           url:'${basePath}/backpage/admin/menu_getlist',
+				           url:'${request.contextPath}/backpage/admin/menu_getlist',
 				           type:'post',
 				           data:{"pageNo":obj.curr,"account":$('#account').val()},
 				           success:function(data) { 
@@ -112,7 +112,7 @@
 								str += '<td>'+val.parentName+'</td>'
 								
 								str += '<td>'
-								str += '<a href="${basePath}/backpage/admin/menu_to_input?id='+val.id+'"  class="layui-btn layui-btn-mini">编辑</a>'
+								str += '<a href="${request.contextPath}/backpage/admin/menu_to_input?id='+val.id+'"  class="layui-btn layui-btn-mini">编辑</a>'
 								str += '<a href="javascript:del(\''+val.id+'\');" data-id="1" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini" id='+ val.id+'>删除</a>'
                                 str += '</tr>'
                             
@@ -129,7 +129,7 @@
 
 				$('#search').on('click', function() {
 						 $.ajax({
-				           url:'${basePath}/backpage/admin/menu_getlist',
+				           url:'${request.contextPath}/backpage/admin/menu_getlist',
 				           type:'post',
 				           data:{"menuName":$('#menuName').val()},
 				           success:function(data) { 
@@ -145,7 +145,7 @@
 								str += '<td>'+val.parentName+'</td>'
 								
 								str += '<td>'
-								str += '<a href="${basePath}/backpage/admin/menu_to_input?id='+val.id+'"  class="layui-btn layui-btn-mini">编辑</a>'
+								str += '<a href="${request.contextPath}/backpage/admin/menu_to_input?id='+val.id+'"  class="layui-btn layui-btn-mini">编辑</a>'
 								str += '<a href="javascript:del(\''+val.id+'\');" data-id="1" data-opt="del" class="layui-btn layui-btn-danger layui-btn-mini" id='+ val.id+'>删除</a>'
                                 str += '</tr>'
                             })
@@ -181,7 +181,7 @@
 			});
 			function del(id){
 			         $.ajax({
-				           url:'${basePath}/backpage/admin/menu_del',
+				           url:'${request.contextPath}/backpage/admin/menu_del',
 				           type:'post',
 				           data:{"id":id},
 				           success:function(data) { 
@@ -198,5 +198,4 @@
 			
 		</script>
 	</body>
-
 </html>
