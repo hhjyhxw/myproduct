@@ -65,11 +65,11 @@
 				</div>
 			</div>
 		</div>
-        <script type="text/javascript" src="${request.contextPath}/plugins/layui/layui.js"></script>
-		<script type="text/javascript" src="${request.contextPath}/js/jquery.min.js"></script>
+        <script type="text/javascript" src="${basePath}/plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="${basePath}/js/jquery.min.js"></script>
 		<script>
 			layui.config({
-				base: '${request.contextPath}/plugins/layui/modules/'
+				base: '${basePath}/plugins/layui/modules/'
 			});
 
 			layui.use(['icheck', 'laypage','layer'], function() {
