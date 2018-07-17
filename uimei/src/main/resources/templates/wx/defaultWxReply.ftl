@@ -66,12 +66,12 @@ function jump(url){
 							<dt class="left co1 ddwid">自动回复内容：</dt>
 							<dd class="left mL20 ddsty">
 								<div class="ddtit">
-									<a class="html_txet" title="源代码">HTML</a><a class="phiz co5"
+									<!-- <a class="html_txet" title="源代码">HTML</a> --><a class="phiz co5"
 										href="javascript:void(0);"> <img
-										src="${basePath}/wx/images/img1.jpg" />表情</a><a
+										src="${basePath}/wx/images/img1.jpg" />表情</a><!-- <a
 										onclick="linkText();" class="link co5"
 										href="javascript:void(0);"> <img
-										src="${basePath}/wx/images/img3.jpg" />超链接</a>
+										src="${basePath}/wx/images/img3.jpg" />超链接</a> -->
 								</div>
 								
 								
